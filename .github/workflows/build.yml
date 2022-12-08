@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --check-files
       - name: Setup .NET CLI
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v3.0.1
         with:
           dotnet-version: 6.0.x
       - name: Install .NET Lambda Tools

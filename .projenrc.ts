@@ -17,7 +17,7 @@ project.gitignore.addPatterns('/test/fixtures/**/bin', '/test/fixtures/**/obj');
 
 // Add setup actions to build & release workflow
 const setupAction = [
-  { 'name': 'Setup .NET CLI', 'uses': 'actions/setup-dotnet@v3', 'with': { 'dotnet-version': '6.0.x' } },
+  { 'name': 'Setup .NET CLI', 'uses': 'actions/setup-dotnet@v3.0.1', 'with': { 'dotnet-version': '6.0.x' } },
   { 'name': 'Install .NET Lambda Tools', 'run': 'dotnet tool install -g Amazon.Lambda.Tools' }
 ]
 const buildWorkflow = project.tryFindObjectFile('.github/workflows/build.yml');
