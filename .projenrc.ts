@@ -22,6 +22,8 @@ const setupAction = [
 ]
 const buildWorkflow = project.tryFindObjectFile('.github/workflows/build.yml');
 const releaseWorkflow = project.tryFindObjectFile('.github/workflows/release.yml');
+buildWorkflow?.patch(JsonPatch.add('/jobs/build/env', { DOTNET_INSTALL_DIR: "./.dotnet" } ));
+releaseWorkflow?.patch(JsonPatch.add('/jobs/release/env', { DOTNET_INSTALL_DIR: "./.dotnet" } ));
 setupAction.forEach((action, index) => {
   buildWorkflow?.patch(JsonPatch.add('/jobs/build/steps/' + (index + 2), action ));
   releaseWorkflow?.patch(JsonPatch.add('/jobs/release/steps/' + (index + 3), action ));

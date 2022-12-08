@@ -12,7 +12,7 @@ jobs:
     outputs:
       self_mutation_happened: ${{ steps.self_mutation.outputs.self_mutation_happened }}
     env:
-      CI: "true"
+      DOTNET_INSTALL_DIR: ./.dotnet
     steps:
       - name: Checkout
         uses: actions/checkout@v3

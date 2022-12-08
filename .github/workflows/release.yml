@@ -14,7 +14,7 @@ jobs:
     outputs:
       latest_commit: ${{ steps.git_remote.outputs.latest_commit }}
     env:
-      CI: "true"
+      DOTNET_INSTALL_DIR: ./.dotnet
     steps:
       - name: Checkout
         uses: actions/checkout@v3
