@@ -14,7 +14,7 @@ jobs:
     outputs:
       latest_commit: ${{ steps.git_remote.outputs.latest_commit }}
     env:
-      DOTNET_INSTALL_DIR: ./.dotnet
+      CI: "true"
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -26,12 +26,6 @@ jobs:
           git config user.email "github-actions@github.com"
       - name: Install dependencies
         run: yarn install --check-files --frozen-lockfile
-      - name: Setup .NET CLI
-        uses: actions/setup-dotnet@v3.0.1
-        with:
-          dotnet-version: 6.0.x
-      - name: Install .NET Lambda Tools
-        run: dotnet tool install -g Amazon.Lambda.Tools
       - name: release
         run: npx projen release
       - name: Check for new commits

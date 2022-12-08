@@ -1,4 +1,4 @@
-import { awscdk, JsonPatch } from 'projen';
+import { awscdk } from 'projen';
 
 const project = new awscdk.AwsCdkConstructLibrary({
   projenrcTs: true,
@@ -15,23 +15,10 @@ const project = new awscdk.AwsCdkConstructLibrary({
   packageName: '@xaaskit-cdk/aws-lambda-dotnet',
   publishToNuget: {
     packageId: 'XaasKit.CDK.AWS.Lambda.DotNet',
-    dotNetNamespace: 'XaasKit.CDK.AWS.Lambda.DotNet',
+    dotNetNamespace: 'XaasKit.CDK',
   },
+  artifactsDirectory: 'dist',
 });
 project.gitignore.addPatterns('/test/fixtures/**/bin', '/test/fixtures/**/obj');
-
-// Add setup actions to build & release workflow
-const setupAction = [
-  { name: 'Setup .NET CLI', uses: 'actions/setup-dotnet@v3.0.1', with: { 'dotnet-version': '6.0.x' } },
-  { name: 'Install .NET Lambda Tools', run: 'dotnet tool install -g Amazon.Lambda.Tools' },
-];
-const buildWorkflow = project.tryFindObjectFile('.github/workflows/build.yml');
-const releaseWorkflow = project.tryFindObjectFile('.github/workflows/release.yml');
-buildWorkflow?.patch(JsonPatch.add('/jobs/build/env', { DOTNET_INSTALL_DIR: './.dotnet' } ));
-releaseWorkflow?.patch(JsonPatch.add('/jobs/release/env', { DOTNET_INSTALL_DIR: './.dotnet' } ));
-setupAction.forEach((action, index) => {
-  buildWorkflow?.patch(JsonPatch.add('/jobs/build/steps/' + (index + 2), action ));
-  releaseWorkflow?.patch(JsonPatch.add('/jobs/release/steps/' + (index + 3), action ));
-});
 
 project.synth();
