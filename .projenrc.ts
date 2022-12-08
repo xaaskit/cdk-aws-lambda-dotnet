@@ -1,4 +1,5 @@
 import { awscdk } from 'projen';
+import { NpmAccess } from 'projen/lib/javascript';
 
 const project = new awscdk.AwsCdkConstructLibrary({
   projenrcTs: true,
@@ -13,6 +14,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   // deps: [],                /* Runtime dependencies of this module. */
   // devDeps: [],             /* Build dependencies for this module. */
   packageName: '@xaaskit-cdk/aws-lambda-dotnet',
+  npmAccess: NpmAccess.PUBLIC,
   publishToNuget: {
     packageId: 'XaasKit.CDK.AWS.Lambda.DotNet',
     dotNetNamespace: 'XaasKit.CDK',
