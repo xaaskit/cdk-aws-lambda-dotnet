@@ -21,10 +21,12 @@ jobs:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
       - name: Install dependencies
         run: yarn install --check-files
-      - uses: actions/setup-dotnet@v3
+      - name: Setup .NET CLI
+        uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 6.0.x
-      - run: dotnet tool install -g Amazon.Lambda.Tools
+      - name: Install .NET Lambda Tools
+        run: dotnet tool install -g Amazon.Lambda.Tools
       - name: build
         run: npx projen build
       - name: Find mutations
