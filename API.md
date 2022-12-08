@@ -2,41 +2,41 @@
 
 ## Constructs <a name="Constructs" id="Constructs"></a>
 
-### DotNetFunction <a name="DotNetFunction" id="cdk-aws-lambda-dotnet.DotNetFunction"></a>
+### DotNetFunction <a name="DotNetFunction" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction"></a>
 
 A .NET Lambda function.
 
-#### Initializers <a name="Initializers" id="cdk-aws-lambda-dotnet.DotNetFunction.Initializer"></a>
+#### Initializers <a name="Initializers" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.Initializer"></a>
 
 ```typescript
-import { DotNetFunction } from 'cdk-aws-lambda-dotnet'
+import { DotNetFunction } from '@xaaskit-cdk/aws-lambda-dotnet'
 
 new DotNetFunction(scope: Construct, id: string, props: DotNetFunctionProps)
 ```
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.Initializer.parameter.props">props</a></code> | <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps">DotNetFunctionProps</a></code> | *No description.* |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.Initializer.parameter.props">props</a></code> | <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps">DotNetFunctionProps</a></code> | *No description.* |
 
 ---
 
-##### `scope`<sup>Required</sup> <a name="scope" id="cdk-aws-lambda-dotnet.DotNetFunction.Initializer.parameter.scope"></a>
+##### `scope`<sup>Required</sup> <a name="scope" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.Initializer.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
 ---
 
-##### `id`<sup>Required</sup> <a name="id" id="cdk-aws-lambda-dotnet.DotNetFunction.Initializer.parameter.id"></a>
+##### `id`<sup>Required</sup> <a name="id" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.Initializer.parameter.id"></a>
 
 - *Type:* string
 
 ---
 
-##### `props`<sup>Required</sup> <a name="props" id="cdk-aws-lambda-dotnet.DotNetFunction.Initializer.parameter.props"></a>
+##### `props`<sup>Required</sup> <a name="props" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.Initializer.parameter.props"></a>
 
-- *Type:* <a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps">DotNetFunctionProps</a>
+- *Type:* <a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps">DotNetFunctionProps</a>
 
 ---
 
@@ -44,29 +44,29 @@ new DotNetFunction(scope: Construct, id: string, props: DotNetFunctionProps)
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.toString">toString</a></code> | Returns a string representation of this construct. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.applyRemovalPolicy">applyRemovalPolicy</a></code> | Apply the given removal policy to this resource. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.addEventSource">addEventSource</a></code> | Adds an event source to this function. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.addEventSourceMapping">addEventSourceMapping</a></code> | Adds an event source that maps to this AWS Lambda function. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.addFunctionUrl">addFunctionUrl</a></code> | Adds a url to this lambda function. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.addPermission">addPermission</a></code> | Adds a permission to the Lambda resource policy. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.addToRolePolicy">addToRolePolicy</a></code> | Adds a statement to the IAM role assumed by the instance. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.configureAsyncInvoke">configureAsyncInvoke</a></code> | Configures options for asynchronous invocation. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.considerWarningOnInvokeFunctionPermissions">considerWarningOnInvokeFunctionPermissions</a></code> | A warning will be added to functions under the following conditions: - permissions that include `lambda:InvokeFunction` are added to the unqualified function. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.grantInvoke">grantInvoke</a></code> | Grant the given identity permissions to invoke this Lambda. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.grantInvokeUrl">grantInvokeUrl</a></code> | Grant the given identity permissions to invoke this Lambda Function URL. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.metric">metric</a></code> | Return the given named metric for this Function. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.metricDuration">metricDuration</a></code> | How long execution of this Lambda takes. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.metricErrors">metricErrors</a></code> | How many invocations of this Lambda fail. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.metricInvocations">metricInvocations</a></code> | How often this Lambda is invoked. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.metricThrottles">metricThrottles</a></code> | How often this Lambda is throttled. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.addAlias">addAlias</a></code> | Defines an alias for this function. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.addEnvironment">addEnvironment</a></code> | Adds an environment variable to this Lambda function. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.addLayers">addLayers</a></code> | Adds one or more Lambda Layers to this Lambda function. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.applyRemovalPolicy">applyRemovalPolicy</a></code> | Apply the given removal policy to this resource. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.addEventSource">addEventSource</a></code> | Adds an event source to this function. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.addEventSourceMapping">addEventSourceMapping</a></code> | Adds an event source that maps to this AWS Lambda function. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.addFunctionUrl">addFunctionUrl</a></code> | Adds a url to this lambda function. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.addPermission">addPermission</a></code> | Adds a permission to the Lambda resource policy. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.addToRolePolicy">addToRolePolicy</a></code> | Adds a statement to the IAM role assumed by the instance. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.configureAsyncInvoke">configureAsyncInvoke</a></code> | Configures options for asynchronous invocation. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.considerWarningOnInvokeFunctionPermissions">considerWarningOnInvokeFunctionPermissions</a></code> | A warning will be added to functions under the following conditions: - permissions that include `lambda:InvokeFunction` are added to the unqualified function. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.grantInvoke">grantInvoke</a></code> | Grant the given identity permissions to invoke this Lambda. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.grantInvokeUrl">grantInvokeUrl</a></code> | Grant the given identity permissions to invoke this Lambda Function URL. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metric">metric</a></code> | Return the given named metric for this Function. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricDuration">metricDuration</a></code> | How long execution of this Lambda takes. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricErrors">metricErrors</a></code> | How many invocations of this Lambda fail. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricInvocations">metricInvocations</a></code> | How often this Lambda is invoked. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricThrottles">metricThrottles</a></code> | How often this Lambda is throttled. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.addAlias">addAlias</a></code> | Defines an alias for this function. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.addEnvironment">addEnvironment</a></code> | Adds an environment variable to this Lambda function. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.addLayers">addLayers</a></code> | Adds one or more Lambda Layers to this Lambda function. |
 
 ---
 
-##### `toString` <a name="toString" id="cdk-aws-lambda-dotnet.DotNetFunction.toString"></a>
+##### `toString` <a name="toString" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.toString"></a>
 
 ```typescript
 public toString(): string
@@ -74,7 +74,7 @@ public toString(): string
 
 Returns a string representation of this construct.
 
-##### `applyRemovalPolicy` <a name="applyRemovalPolicy" id="cdk-aws-lambda-dotnet.DotNetFunction.applyRemovalPolicy"></a>
+##### `applyRemovalPolicy` <a name="applyRemovalPolicy" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.applyRemovalPolicy"></a>
 
 ```typescript
 public applyRemovalPolicy(policy: RemovalPolicy): void
@@ -90,13 +90,13 @@ to be replaced.
 The resource can be deleted (`RemovalPolicy.DESTROY`), or left in your AWS
 account for data recovery and cleanup later (`RemovalPolicy.RETAIN`).
 
-###### `policy`<sup>Required</sup> <a name="policy" id="cdk-aws-lambda-dotnet.DotNetFunction.applyRemovalPolicy.parameter.policy"></a>
+###### `policy`<sup>Required</sup> <a name="policy" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.applyRemovalPolicy.parameter.policy"></a>
 
 - *Type:* aws-cdk-lib.RemovalPolicy
 
 ---
 
-##### `addEventSource` <a name="addEventSource" id="cdk-aws-lambda-dotnet.DotNetFunction.addEventSource"></a>
+##### `addEventSource` <a name="addEventSource" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.addEventSource"></a>
 
 ```typescript
 public addEventSource(source: IEventSource): void
@@ -112,13 +112,13 @@ import { SqsEventSource } from '@aws-cdk/aws-lambda-event-sources';
 myFunction.addEventSource(new SqsEventSource(myQueue));
 ```
 
-###### `source`<sup>Required</sup> <a name="source" id="cdk-aws-lambda-dotnet.DotNetFunction.addEventSource.parameter.source"></a>
+###### `source`<sup>Required</sup> <a name="source" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.addEventSource.parameter.source"></a>
 
 - *Type:* aws-cdk-lib.aws_lambda.IEventSource
 
 ---
 
-##### `addEventSourceMapping` <a name="addEventSourceMapping" id="cdk-aws-lambda-dotnet.DotNetFunction.addEventSourceMapping"></a>
+##### `addEventSourceMapping` <a name="addEventSourceMapping" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.addEventSourceMapping"></a>
 
 ```typescript
 public addEventSourceMapping(id: string, options: EventSourceMappingOptions): EventSourceMapping
@@ -126,19 +126,19 @@ public addEventSourceMapping(id: string, options: EventSourceMappingOptions): Ev
 
 Adds an event source that maps to this AWS Lambda function.
 
-###### `id`<sup>Required</sup> <a name="id" id="cdk-aws-lambda-dotnet.DotNetFunction.addEventSourceMapping.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.addEventSourceMapping.parameter.id"></a>
 
 - *Type:* string
 
 ---
 
-###### `options`<sup>Required</sup> <a name="options" id="cdk-aws-lambda-dotnet.DotNetFunction.addEventSourceMapping.parameter.options"></a>
+###### `options`<sup>Required</sup> <a name="options" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.addEventSourceMapping.parameter.options"></a>
 
 - *Type:* aws-cdk-lib.aws_lambda.EventSourceMappingOptions
 
 ---
 
-##### `addFunctionUrl` <a name="addFunctionUrl" id="cdk-aws-lambda-dotnet.DotNetFunction.addFunctionUrl"></a>
+##### `addFunctionUrl` <a name="addFunctionUrl" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.addFunctionUrl"></a>
 
 ```typescript
 public addFunctionUrl(options?: FunctionUrlOptions): FunctionUrl
@@ -146,13 +146,13 @@ public addFunctionUrl(options?: FunctionUrlOptions): FunctionUrl
 
 Adds a url to this lambda function.
 
-###### `options`<sup>Optional</sup> <a name="options" id="cdk-aws-lambda-dotnet.DotNetFunction.addFunctionUrl.parameter.options"></a>
+###### `options`<sup>Optional</sup> <a name="options" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.addFunctionUrl.parameter.options"></a>
 
 - *Type:* aws-cdk-lib.aws_lambda.FunctionUrlOptions
 
 ---
 
-##### `addPermission` <a name="addPermission" id="cdk-aws-lambda-dotnet.DotNetFunction.addPermission"></a>
+##### `addPermission` <a name="addPermission" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.addPermission"></a>
 
 ```typescript
 public addPermission(id: string, permission: Permission): void
@@ -162,7 +162,7 @@ Adds a permission to the Lambda resource policy.
 
 > [Permission for details.](Permission for details.)
 
-###### `id`<sup>Required</sup> <a name="id" id="cdk-aws-lambda-dotnet.DotNetFunction.addPermission.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.addPermission.parameter.id"></a>
 
 - *Type:* string
 
@@ -170,7 +170,7 @@ The id for the permission construct.
 
 ---
 
-###### `permission`<sup>Required</sup> <a name="permission" id="cdk-aws-lambda-dotnet.DotNetFunction.addPermission.parameter.permission"></a>
+###### `permission`<sup>Required</sup> <a name="permission" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.addPermission.parameter.permission"></a>
 
 - *Type:* aws-cdk-lib.aws_lambda.Permission
 
@@ -178,7 +178,7 @@ The permission to grant to this Lambda function.
 
 ---
 
-##### `addToRolePolicy` <a name="addToRolePolicy" id="cdk-aws-lambda-dotnet.DotNetFunction.addToRolePolicy"></a>
+##### `addToRolePolicy` <a name="addToRolePolicy" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.addToRolePolicy"></a>
 
 ```typescript
 public addToRolePolicy(statement: PolicyStatement): void
@@ -186,13 +186,13 @@ public addToRolePolicy(statement: PolicyStatement): void
 
 Adds a statement to the IAM role assumed by the instance.
 
-###### `statement`<sup>Required</sup> <a name="statement" id="cdk-aws-lambda-dotnet.DotNetFunction.addToRolePolicy.parameter.statement"></a>
+###### `statement`<sup>Required</sup> <a name="statement" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.addToRolePolicy.parameter.statement"></a>
 
 - *Type:* aws-cdk-lib.aws_iam.PolicyStatement
 
 ---
 
-##### `configureAsyncInvoke` <a name="configureAsyncInvoke" id="cdk-aws-lambda-dotnet.DotNetFunction.configureAsyncInvoke"></a>
+##### `configureAsyncInvoke` <a name="configureAsyncInvoke" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.configureAsyncInvoke"></a>
 
 ```typescript
 public configureAsyncInvoke(options: EventInvokeConfigOptions): void
@@ -200,13 +200,13 @@ public configureAsyncInvoke(options: EventInvokeConfigOptions): void
 
 Configures options for asynchronous invocation.
 
-###### `options`<sup>Required</sup> <a name="options" id="cdk-aws-lambda-dotnet.DotNetFunction.configureAsyncInvoke.parameter.options"></a>
+###### `options`<sup>Required</sup> <a name="options" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.configureAsyncInvoke.parameter.options"></a>
 
 - *Type:* aws-cdk-lib.aws_lambda.EventInvokeConfigOptions
 
 ---
 
-##### `considerWarningOnInvokeFunctionPermissions` <a name="considerWarningOnInvokeFunctionPermissions" id="cdk-aws-lambda-dotnet.DotNetFunction.considerWarningOnInvokeFunctionPermissions"></a>
+##### `considerWarningOnInvokeFunctionPermissions` <a name="considerWarningOnInvokeFunctionPermissions" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.considerWarningOnInvokeFunctionPermissions"></a>
 
 ```typescript
 public considerWarningOnInvokeFunctionPermissions(scope: Construct, action: string): void
@@ -219,19 +219,19 @@ function.currentVersion is invoked before or after the permission is created.
 This applies only to permissions on Lambda functions, not versions or aliases.
 This function is overridden as a noOp for QualifiedFunctionBase.
 
-###### `scope`<sup>Required</sup> <a name="scope" id="cdk-aws-lambda-dotnet.DotNetFunction.considerWarningOnInvokeFunctionPermissions.parameter.scope"></a>
+###### `scope`<sup>Required</sup> <a name="scope" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.considerWarningOnInvokeFunctionPermissions.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
 ---
 
-###### `action`<sup>Required</sup> <a name="action" id="cdk-aws-lambda-dotnet.DotNetFunction.considerWarningOnInvokeFunctionPermissions.parameter.action"></a>
+###### `action`<sup>Required</sup> <a name="action" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.considerWarningOnInvokeFunctionPermissions.parameter.action"></a>
 
 - *Type:* string
 
 ---
 
-##### `grantInvoke` <a name="grantInvoke" id="cdk-aws-lambda-dotnet.DotNetFunction.grantInvoke"></a>
+##### `grantInvoke` <a name="grantInvoke" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.grantInvoke"></a>
 
 ```typescript
 public grantInvoke(grantee: IGrantable): Grant
@@ -239,13 +239,13 @@ public grantInvoke(grantee: IGrantable): Grant
 
 Grant the given identity permissions to invoke this Lambda.
 
-###### `grantee`<sup>Required</sup> <a name="grantee" id="cdk-aws-lambda-dotnet.DotNetFunction.grantInvoke.parameter.grantee"></a>
+###### `grantee`<sup>Required</sup> <a name="grantee" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.grantInvoke.parameter.grantee"></a>
 
 - *Type:* aws-cdk-lib.aws_iam.IGrantable
 
 ---
 
-##### `grantInvokeUrl` <a name="grantInvokeUrl" id="cdk-aws-lambda-dotnet.DotNetFunction.grantInvokeUrl"></a>
+##### `grantInvokeUrl` <a name="grantInvokeUrl" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.grantInvokeUrl"></a>
 
 ```typescript
 public grantInvokeUrl(grantee: IGrantable): Grant
@@ -253,13 +253,13 @@ public grantInvokeUrl(grantee: IGrantable): Grant
 
 Grant the given identity permissions to invoke this Lambda Function URL.
 
-###### `grantee`<sup>Required</sup> <a name="grantee" id="cdk-aws-lambda-dotnet.DotNetFunction.grantInvokeUrl.parameter.grantee"></a>
+###### `grantee`<sup>Required</sup> <a name="grantee" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.grantInvokeUrl.parameter.grantee"></a>
 
 - *Type:* aws-cdk-lib.aws_iam.IGrantable
 
 ---
 
-##### `metric` <a name="metric" id="cdk-aws-lambda-dotnet.DotNetFunction.metric"></a>
+##### `metric` <a name="metric" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metric"></a>
 
 ```typescript
 public metric(metricName: string, props?: MetricOptions): Metric
@@ -267,19 +267,19 @@ public metric(metricName: string, props?: MetricOptions): Metric
 
 Return the given named metric for this Function.
 
-###### `metricName`<sup>Required</sup> <a name="metricName" id="cdk-aws-lambda-dotnet.DotNetFunction.metric.parameter.metricName"></a>
+###### `metricName`<sup>Required</sup> <a name="metricName" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metric.parameter.metricName"></a>
 
 - *Type:* string
 
 ---
 
-###### `props`<sup>Optional</sup> <a name="props" id="cdk-aws-lambda-dotnet.DotNetFunction.metric.parameter.props"></a>
+###### `props`<sup>Optional</sup> <a name="props" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metric.parameter.props"></a>
 
 - *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
 
 ---
 
-##### `metricDuration` <a name="metricDuration" id="cdk-aws-lambda-dotnet.DotNetFunction.metricDuration"></a>
+##### `metricDuration` <a name="metricDuration" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricDuration"></a>
 
 ```typescript
 public metricDuration(props?: MetricOptions): Metric
@@ -289,13 +289,13 @@ How long execution of this Lambda takes.
 
 Average over 5 minutes
 
-###### `props`<sup>Optional</sup> <a name="props" id="cdk-aws-lambda-dotnet.DotNetFunction.metricDuration.parameter.props"></a>
+###### `props`<sup>Optional</sup> <a name="props" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricDuration.parameter.props"></a>
 
 - *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
 
 ---
 
-##### `metricErrors` <a name="metricErrors" id="cdk-aws-lambda-dotnet.DotNetFunction.metricErrors"></a>
+##### `metricErrors` <a name="metricErrors" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricErrors"></a>
 
 ```typescript
 public metricErrors(props?: MetricOptions): Metric
@@ -305,13 +305,13 @@ How many invocations of this Lambda fail.
 
 Sum over 5 minutes
 
-###### `props`<sup>Optional</sup> <a name="props" id="cdk-aws-lambda-dotnet.DotNetFunction.metricErrors.parameter.props"></a>
+###### `props`<sup>Optional</sup> <a name="props" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricErrors.parameter.props"></a>
 
 - *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
 
 ---
 
-##### `metricInvocations` <a name="metricInvocations" id="cdk-aws-lambda-dotnet.DotNetFunction.metricInvocations"></a>
+##### `metricInvocations` <a name="metricInvocations" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricInvocations"></a>
 
 ```typescript
 public metricInvocations(props?: MetricOptions): Metric
@@ -321,13 +321,13 @@ How often this Lambda is invoked.
 
 Sum over 5 minutes
 
-###### `props`<sup>Optional</sup> <a name="props" id="cdk-aws-lambda-dotnet.DotNetFunction.metricInvocations.parameter.props"></a>
+###### `props`<sup>Optional</sup> <a name="props" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricInvocations.parameter.props"></a>
 
 - *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
 
 ---
 
-##### `metricThrottles` <a name="metricThrottles" id="cdk-aws-lambda-dotnet.DotNetFunction.metricThrottles"></a>
+##### `metricThrottles` <a name="metricThrottles" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricThrottles"></a>
 
 ```typescript
 public metricThrottles(props?: MetricOptions): Metric
@@ -337,13 +337,13 @@ How often this Lambda is throttled.
 
 Sum over 5 minutes
 
-###### `props`<sup>Optional</sup> <a name="props" id="cdk-aws-lambda-dotnet.DotNetFunction.metricThrottles.parameter.props"></a>
+###### `props`<sup>Optional</sup> <a name="props" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricThrottles.parameter.props"></a>
 
 - *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
 
 ---
 
-##### `addAlias` <a name="addAlias" id="cdk-aws-lambda-dotnet.DotNetFunction.addAlias"></a>
+##### `addAlias` <a name="addAlias" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.addAlias"></a>
 
 ```typescript
 public addAlias(aliasName: string, options?: AliasOptions): Alias
@@ -367,7 +367,7 @@ new lambda.Alias(this, 'AliasLive', {
 });
 ```
 
-###### `aliasName`<sup>Required</sup> <a name="aliasName" id="cdk-aws-lambda-dotnet.DotNetFunction.addAlias.parameter.aliasName"></a>
+###### `aliasName`<sup>Required</sup> <a name="aliasName" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.addAlias.parameter.aliasName"></a>
 
 - *Type:* string
 
@@ -375,7 +375,7 @@ The name of the alias.
 
 ---
 
-###### `options`<sup>Optional</sup> <a name="options" id="cdk-aws-lambda-dotnet.DotNetFunction.addAlias.parameter.options"></a>
+###### `options`<sup>Optional</sup> <a name="options" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.addAlias.parameter.options"></a>
 
 - *Type:* aws-cdk-lib.aws_lambda.AliasOptions
 
@@ -383,7 +383,7 @@ Alias options.
 
 ---
 
-##### `addEnvironment` <a name="addEnvironment" id="cdk-aws-lambda-dotnet.DotNetFunction.addEnvironment"></a>
+##### `addEnvironment` <a name="addEnvironment" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.addEnvironment"></a>
 
 ```typescript
 public addEnvironment(key: string, value: string, options?: EnvironmentOptions): Function
@@ -393,7 +393,7 @@ Adds an environment variable to this Lambda function.
 
 If this is a ref to a Lambda function, this operation results in a no-op.
 
-###### `key`<sup>Required</sup> <a name="key" id="cdk-aws-lambda-dotnet.DotNetFunction.addEnvironment.parameter.key"></a>
+###### `key`<sup>Required</sup> <a name="key" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.addEnvironment.parameter.key"></a>
 
 - *Type:* string
 
@@ -401,7 +401,7 @@ The environment variable key.
 
 ---
 
-###### `value`<sup>Required</sup> <a name="value" id="cdk-aws-lambda-dotnet.DotNetFunction.addEnvironment.parameter.value"></a>
+###### `value`<sup>Required</sup> <a name="value" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.addEnvironment.parameter.value"></a>
 
 - *Type:* string
 
@@ -409,7 +409,7 @@ The environment variable's value.
 
 ---
 
-###### `options`<sup>Optional</sup> <a name="options" id="cdk-aws-lambda-dotnet.DotNetFunction.addEnvironment.parameter.options"></a>
+###### `options`<sup>Optional</sup> <a name="options" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.addEnvironment.parameter.options"></a>
 
 - *Type:* aws-cdk-lib.aws_lambda.EnvironmentOptions
 
@@ -417,7 +417,7 @@ Environment variable options.
 
 ---
 
-##### `addLayers` <a name="addLayers" id="cdk-aws-lambda-dotnet.DotNetFunction.addLayers"></a>
+##### `addLayers` <a name="addLayers" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.addLayers"></a>
 
 ```typescript
 public addLayers(layers: ILayerVersion): void
@@ -425,7 +425,7 @@ public addLayers(layers: ILayerVersion): void
 
 Adds one or more Lambda Layers to this Lambda function.
 
-###### `layers`<sup>Required</sup> <a name="layers" id="cdk-aws-lambda-dotnet.DotNetFunction.addLayers.parameter.layers"></a>
+###### `layers`<sup>Required</sup> <a name="layers" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.addLayers.parameter.layers"></a>
 
 - *Type:* aws-cdk-lib.aws_lambda.ILayerVersion
 
@@ -437,34 +437,34 @@ the layers to be added.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.isOwnedResource">isOwnedResource</a></code> | Returns true if the construct was created by CDK, and false otherwise. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.isResource">isResource</a></code> | Check whether the given construct is a Resource. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.classifyVersionProperty">classifyVersionProperty</a></code> | Record whether specific properties in the `AWS::Lambda::Function` resource should also be associated to the Version resource. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.fromFunctionArn">fromFunctionArn</a></code> | Import a lambda function into the CDK using its ARN. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.fromFunctionAttributes">fromFunctionAttributes</a></code> | Creates a Lambda function object which represents a function not defined within this stack. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.fromFunctionName">fromFunctionName</a></code> | Import a lambda function into the CDK using its name. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.metricAll">metricAll</a></code> | Return the given named metric for this Lambda. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.metricAllConcurrentExecutions">metricAllConcurrentExecutions</a></code> | Metric for the number of concurrent executions across all Lambdas. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.metricAllDuration">metricAllDuration</a></code> | Metric for the Duration executing all Lambdas. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.metricAllErrors">metricAllErrors</a></code> | Metric for the number of Errors executing all Lambdas. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.metricAllInvocations">metricAllInvocations</a></code> | Metric for the number of invocations of all Lambdas. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.metricAllThrottles">metricAllThrottles</a></code> | Metric for the number of throttled invocations of all Lambdas. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.metricAllUnreservedConcurrentExecutions">metricAllUnreservedConcurrentExecutions</a></code> | Metric for the number of unreserved concurrent executions across all Lambdas. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.isOwnedResource">isOwnedResource</a></code> | Returns true if the construct was created by CDK, and false otherwise. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.isResource">isResource</a></code> | Check whether the given construct is a Resource. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.classifyVersionProperty">classifyVersionProperty</a></code> | Record whether specific properties in the `AWS::Lambda::Function` resource should also be associated to the Version resource. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.fromFunctionArn">fromFunctionArn</a></code> | Import a lambda function into the CDK using its ARN. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.fromFunctionAttributes">fromFunctionAttributes</a></code> | Creates a Lambda function object which represents a function not defined within this stack. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.fromFunctionName">fromFunctionName</a></code> | Import a lambda function into the CDK using its name. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricAll">metricAll</a></code> | Return the given named metric for this Lambda. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricAllConcurrentExecutions">metricAllConcurrentExecutions</a></code> | Metric for the number of concurrent executions across all Lambdas. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricAllDuration">metricAllDuration</a></code> | Metric for the Duration executing all Lambdas. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricAllErrors">metricAllErrors</a></code> | Metric for the number of Errors executing all Lambdas. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricAllInvocations">metricAllInvocations</a></code> | Metric for the number of invocations of all Lambdas. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricAllThrottles">metricAllThrottles</a></code> | Metric for the number of throttled invocations of all Lambdas. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricAllUnreservedConcurrentExecutions">metricAllUnreservedConcurrentExecutions</a></code> | Metric for the number of unreserved concurrent executions across all Lambdas. |
 
 ---
 
-##### ~~`isConstruct`~~ <a name="isConstruct" id="cdk-aws-lambda-dotnet.DotNetFunction.isConstruct"></a>
+##### ~~`isConstruct`~~ <a name="isConstruct" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.isConstruct"></a>
 
 ```typescript
-import { DotNetFunction } from 'cdk-aws-lambda-dotnet'
+import { DotNetFunction } from '@xaaskit-cdk/aws-lambda-dotnet'
 
 DotNetFunction.isConstruct(x: any)
 ```
 
 Checks if `x` is a construct.
 
-###### `x`<sup>Required</sup> <a name="x" id="cdk-aws-lambda-dotnet.DotNetFunction.isConstruct.parameter.x"></a>
+###### `x`<sup>Required</sup> <a name="x" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.isConstruct.parameter.x"></a>
 
 - *Type:* any
 
@@ -472,42 +472,42 @@ Any object.
 
 ---
 
-##### `isOwnedResource` <a name="isOwnedResource" id="cdk-aws-lambda-dotnet.DotNetFunction.isOwnedResource"></a>
+##### `isOwnedResource` <a name="isOwnedResource" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.isOwnedResource"></a>
 
 ```typescript
-import { DotNetFunction } from 'cdk-aws-lambda-dotnet'
+import { DotNetFunction } from '@xaaskit-cdk/aws-lambda-dotnet'
 
 DotNetFunction.isOwnedResource(construct: IConstruct)
 ```
 
 Returns true if the construct was created by CDK, and false otherwise.
 
-###### `construct`<sup>Required</sup> <a name="construct" id="cdk-aws-lambda-dotnet.DotNetFunction.isOwnedResource.parameter.construct"></a>
+###### `construct`<sup>Required</sup> <a name="construct" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.isOwnedResource.parameter.construct"></a>
 
 - *Type:* constructs.IConstruct
 
 ---
 
-##### `isResource` <a name="isResource" id="cdk-aws-lambda-dotnet.DotNetFunction.isResource"></a>
+##### `isResource` <a name="isResource" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.isResource"></a>
 
 ```typescript
-import { DotNetFunction } from 'cdk-aws-lambda-dotnet'
+import { DotNetFunction } from '@xaaskit-cdk/aws-lambda-dotnet'
 
 DotNetFunction.isResource(construct: IConstruct)
 ```
 
 Check whether the given construct is a Resource.
 
-###### `construct`<sup>Required</sup> <a name="construct" id="cdk-aws-lambda-dotnet.DotNetFunction.isResource.parameter.construct"></a>
+###### `construct`<sup>Required</sup> <a name="construct" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.isResource.parameter.construct"></a>
 
 - *Type:* constructs.IConstruct
 
 ---
 
-##### `classifyVersionProperty` <a name="classifyVersionProperty" id="cdk-aws-lambda-dotnet.DotNetFunction.classifyVersionProperty"></a>
+##### `classifyVersionProperty` <a name="classifyVersionProperty" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.classifyVersionProperty"></a>
 
 ```typescript
-import { DotNetFunction } from 'cdk-aws-lambda-dotnet'
+import { DotNetFunction } from '@xaaskit-cdk/aws-lambda-dotnet'
 
 DotNetFunction.classifyVersionProperty(propertyName: string, locked: boolean)
 ```
@@ -516,7 +516,7 @@ Record whether specific properties in the `AWS::Lambda::Function` resource shoul
 
 See 'currentVersion' section in the module README for more details.
 
-###### `propertyName`<sup>Required</sup> <a name="propertyName" id="cdk-aws-lambda-dotnet.DotNetFunction.classifyVersionProperty.parameter.propertyName"></a>
+###### `propertyName`<sup>Required</sup> <a name="propertyName" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.classifyVersionProperty.parameter.propertyName"></a>
 
 - *Type:* string
 
@@ -524,7 +524,7 @@ The property to classify.
 
 ---
 
-###### `locked`<sup>Required</sup> <a name="locked" id="cdk-aws-lambda-dotnet.DotNetFunction.classifyVersionProperty.parameter.locked"></a>
+###### `locked`<sup>Required</sup> <a name="locked" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.classifyVersionProperty.parameter.locked"></a>
 
 - *Type:* boolean
 
@@ -532,45 +532,45 @@ whether the property should be associated to the version or not.
 
 ---
 
-##### `fromFunctionArn` <a name="fromFunctionArn" id="cdk-aws-lambda-dotnet.DotNetFunction.fromFunctionArn"></a>
+##### `fromFunctionArn` <a name="fromFunctionArn" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.fromFunctionArn"></a>
 
 ```typescript
-import { DotNetFunction } from 'cdk-aws-lambda-dotnet'
+import { DotNetFunction } from '@xaaskit-cdk/aws-lambda-dotnet'
 
 DotNetFunction.fromFunctionArn(scope: Construct, id: string, functionArn: string)
 ```
 
 Import a lambda function into the CDK using its ARN.
 
-###### `scope`<sup>Required</sup> <a name="scope" id="cdk-aws-lambda-dotnet.DotNetFunction.fromFunctionArn.parameter.scope"></a>
+###### `scope`<sup>Required</sup> <a name="scope" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.fromFunctionArn.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
 ---
 
-###### `id`<sup>Required</sup> <a name="id" id="cdk-aws-lambda-dotnet.DotNetFunction.fromFunctionArn.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.fromFunctionArn.parameter.id"></a>
 
 - *Type:* string
 
 ---
 
-###### `functionArn`<sup>Required</sup> <a name="functionArn" id="cdk-aws-lambda-dotnet.DotNetFunction.fromFunctionArn.parameter.functionArn"></a>
+###### `functionArn`<sup>Required</sup> <a name="functionArn" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.fromFunctionArn.parameter.functionArn"></a>
 
 - *Type:* string
 
 ---
 
-##### `fromFunctionAttributes` <a name="fromFunctionAttributes" id="cdk-aws-lambda-dotnet.DotNetFunction.fromFunctionAttributes"></a>
+##### `fromFunctionAttributes` <a name="fromFunctionAttributes" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.fromFunctionAttributes"></a>
 
 ```typescript
-import { DotNetFunction } from 'cdk-aws-lambda-dotnet'
+import { DotNetFunction } from '@xaaskit-cdk/aws-lambda-dotnet'
 
 DotNetFunction.fromFunctionAttributes(scope: Construct, id: string, attrs: FunctionAttributes)
 ```
 
 Creates a Lambda function object which represents a function not defined within this stack.
 
-###### `scope`<sup>Required</sup> <a name="scope" id="cdk-aws-lambda-dotnet.DotNetFunction.fromFunctionAttributes.parameter.scope"></a>
+###### `scope`<sup>Required</sup> <a name="scope" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.fromFunctionAttributes.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
@@ -578,7 +578,7 @@ The parent construct.
 
 ---
 
-###### `id`<sup>Required</sup> <a name="id" id="cdk-aws-lambda-dotnet.DotNetFunction.fromFunctionAttributes.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.fromFunctionAttributes.parameter.id"></a>
 
 - *Type:* string
 
@@ -586,7 +586,7 @@ The name of the lambda construct.
 
 ---
 
-###### `attrs`<sup>Required</sup> <a name="attrs" id="cdk-aws-lambda-dotnet.DotNetFunction.fromFunctionAttributes.parameter.attrs"></a>
+###### `attrs`<sup>Required</sup> <a name="attrs" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.fromFunctionAttributes.parameter.attrs"></a>
 
 - *Type:* aws-cdk-lib.aws_lambda.FunctionAttributes
 
@@ -594,147 +594,147 @@ the attributes of the function to import.
 
 ---
 
-##### `fromFunctionName` <a name="fromFunctionName" id="cdk-aws-lambda-dotnet.DotNetFunction.fromFunctionName"></a>
+##### `fromFunctionName` <a name="fromFunctionName" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.fromFunctionName"></a>
 
 ```typescript
-import { DotNetFunction } from 'cdk-aws-lambda-dotnet'
+import { DotNetFunction } from '@xaaskit-cdk/aws-lambda-dotnet'
 
 DotNetFunction.fromFunctionName(scope: Construct, id: string, functionName: string)
 ```
 
 Import a lambda function into the CDK using its name.
 
-###### `scope`<sup>Required</sup> <a name="scope" id="cdk-aws-lambda-dotnet.DotNetFunction.fromFunctionName.parameter.scope"></a>
+###### `scope`<sup>Required</sup> <a name="scope" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.fromFunctionName.parameter.scope"></a>
 
 - *Type:* constructs.Construct
 
 ---
 
-###### `id`<sup>Required</sup> <a name="id" id="cdk-aws-lambda-dotnet.DotNetFunction.fromFunctionName.parameter.id"></a>
+###### `id`<sup>Required</sup> <a name="id" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.fromFunctionName.parameter.id"></a>
 
 - *Type:* string
 
 ---
 
-###### `functionName`<sup>Required</sup> <a name="functionName" id="cdk-aws-lambda-dotnet.DotNetFunction.fromFunctionName.parameter.functionName"></a>
+###### `functionName`<sup>Required</sup> <a name="functionName" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.fromFunctionName.parameter.functionName"></a>
 
 - *Type:* string
 
 ---
 
-##### `metricAll` <a name="metricAll" id="cdk-aws-lambda-dotnet.DotNetFunction.metricAll"></a>
+##### `metricAll` <a name="metricAll" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricAll"></a>
 
 ```typescript
-import { DotNetFunction } from 'cdk-aws-lambda-dotnet'
+import { DotNetFunction } from '@xaaskit-cdk/aws-lambda-dotnet'
 
 DotNetFunction.metricAll(metricName: string, props?: MetricOptions)
 ```
 
 Return the given named metric for this Lambda.
 
-###### `metricName`<sup>Required</sup> <a name="metricName" id="cdk-aws-lambda-dotnet.DotNetFunction.metricAll.parameter.metricName"></a>
+###### `metricName`<sup>Required</sup> <a name="metricName" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricAll.parameter.metricName"></a>
 
 - *Type:* string
 
 ---
 
-###### `props`<sup>Optional</sup> <a name="props" id="cdk-aws-lambda-dotnet.DotNetFunction.metricAll.parameter.props"></a>
+###### `props`<sup>Optional</sup> <a name="props" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricAll.parameter.props"></a>
 
 - *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
 
 ---
 
-##### `metricAllConcurrentExecutions` <a name="metricAllConcurrentExecutions" id="cdk-aws-lambda-dotnet.DotNetFunction.metricAllConcurrentExecutions"></a>
+##### `metricAllConcurrentExecutions` <a name="metricAllConcurrentExecutions" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricAllConcurrentExecutions"></a>
 
 ```typescript
-import { DotNetFunction } from 'cdk-aws-lambda-dotnet'
+import { DotNetFunction } from '@xaaskit-cdk/aws-lambda-dotnet'
 
 DotNetFunction.metricAllConcurrentExecutions(props?: MetricOptions)
 ```
 
 Metric for the number of concurrent executions across all Lambdas.
 
-###### `props`<sup>Optional</sup> <a name="props" id="cdk-aws-lambda-dotnet.DotNetFunction.metricAllConcurrentExecutions.parameter.props"></a>
+###### `props`<sup>Optional</sup> <a name="props" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricAllConcurrentExecutions.parameter.props"></a>
 
 - *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
 
 ---
 
-##### `metricAllDuration` <a name="metricAllDuration" id="cdk-aws-lambda-dotnet.DotNetFunction.metricAllDuration"></a>
+##### `metricAllDuration` <a name="metricAllDuration" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricAllDuration"></a>
 
 ```typescript
-import { DotNetFunction } from 'cdk-aws-lambda-dotnet'
+import { DotNetFunction } from '@xaaskit-cdk/aws-lambda-dotnet'
 
 DotNetFunction.metricAllDuration(props?: MetricOptions)
 ```
 
 Metric for the Duration executing all Lambdas.
 
-###### `props`<sup>Optional</sup> <a name="props" id="cdk-aws-lambda-dotnet.DotNetFunction.metricAllDuration.parameter.props"></a>
+###### `props`<sup>Optional</sup> <a name="props" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricAllDuration.parameter.props"></a>
 
 - *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
 
 ---
 
-##### `metricAllErrors` <a name="metricAllErrors" id="cdk-aws-lambda-dotnet.DotNetFunction.metricAllErrors"></a>
+##### `metricAllErrors` <a name="metricAllErrors" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricAllErrors"></a>
 
 ```typescript
-import { DotNetFunction } from 'cdk-aws-lambda-dotnet'
+import { DotNetFunction } from '@xaaskit-cdk/aws-lambda-dotnet'
 
 DotNetFunction.metricAllErrors(props?: MetricOptions)
 ```
 
 Metric for the number of Errors executing all Lambdas.
 
-###### `props`<sup>Optional</sup> <a name="props" id="cdk-aws-lambda-dotnet.DotNetFunction.metricAllErrors.parameter.props"></a>
+###### `props`<sup>Optional</sup> <a name="props" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricAllErrors.parameter.props"></a>
 
 - *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
 
 ---
 
-##### `metricAllInvocations` <a name="metricAllInvocations" id="cdk-aws-lambda-dotnet.DotNetFunction.metricAllInvocations"></a>
+##### `metricAllInvocations` <a name="metricAllInvocations" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricAllInvocations"></a>
 
 ```typescript
-import { DotNetFunction } from 'cdk-aws-lambda-dotnet'
+import { DotNetFunction } from '@xaaskit-cdk/aws-lambda-dotnet'
 
 DotNetFunction.metricAllInvocations(props?: MetricOptions)
 ```
 
 Metric for the number of invocations of all Lambdas.
 
-###### `props`<sup>Optional</sup> <a name="props" id="cdk-aws-lambda-dotnet.DotNetFunction.metricAllInvocations.parameter.props"></a>
+###### `props`<sup>Optional</sup> <a name="props" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricAllInvocations.parameter.props"></a>
 
 - *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
 
 ---
 
-##### `metricAllThrottles` <a name="metricAllThrottles" id="cdk-aws-lambda-dotnet.DotNetFunction.metricAllThrottles"></a>
+##### `metricAllThrottles` <a name="metricAllThrottles" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricAllThrottles"></a>
 
 ```typescript
-import { DotNetFunction } from 'cdk-aws-lambda-dotnet'
+import { DotNetFunction } from '@xaaskit-cdk/aws-lambda-dotnet'
 
 DotNetFunction.metricAllThrottles(props?: MetricOptions)
 ```
 
 Metric for the number of throttled invocations of all Lambdas.
 
-###### `props`<sup>Optional</sup> <a name="props" id="cdk-aws-lambda-dotnet.DotNetFunction.metricAllThrottles.parameter.props"></a>
+###### `props`<sup>Optional</sup> <a name="props" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricAllThrottles.parameter.props"></a>
 
 - *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
 
 ---
 
-##### `metricAllUnreservedConcurrentExecutions` <a name="metricAllUnreservedConcurrentExecutions" id="cdk-aws-lambda-dotnet.DotNetFunction.metricAllUnreservedConcurrentExecutions"></a>
+##### `metricAllUnreservedConcurrentExecutions` <a name="metricAllUnreservedConcurrentExecutions" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricAllUnreservedConcurrentExecutions"></a>
 
 ```typescript
-import { DotNetFunction } from 'cdk-aws-lambda-dotnet'
+import { DotNetFunction } from '@xaaskit-cdk/aws-lambda-dotnet'
 
 DotNetFunction.metricAllUnreservedConcurrentExecutions(props?: MetricOptions)
 ```
 
 Metric for the number of unreserved concurrent executions across all Lambdas.
 
-###### `props`<sup>Optional</sup> <a name="props" id="cdk-aws-lambda-dotnet.DotNetFunction.metricAllUnreservedConcurrentExecutions.parameter.props"></a>
+###### `props`<sup>Optional</sup> <a name="props" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.metricAllUnreservedConcurrentExecutions.parameter.props"></a>
 
 - *Type:* aws-cdk-lib.aws_cloudwatch.MetricOptions
 
@@ -744,29 +744,29 @@ Metric for the number of unreserved concurrent executions across all Lambdas.
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.property.env">env</a></code> | <code>aws-cdk-lib.ResourceEnvironment</code> | The environment this resource belongs to. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.property.stack">stack</a></code> | <code>aws-cdk-lib.Stack</code> | The stack in which this resource is defined. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.property.architecture">architecture</a></code> | <code>aws-cdk-lib.aws_lambda.Architecture</code> | The architecture of this Lambda Function (this is an optional attribute and defaults to X86_64). |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.property.connections">connections</a></code> | <code>aws-cdk-lib.aws_ec2.Connections</code> | Access the Connections object. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.property.functionArn">functionArn</a></code> | <code>string</code> | ARN of this function. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.property.functionName">functionName</a></code> | <code>string</code> | Name of this function. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.property.grantPrincipal">grantPrincipal</a></code> | <code>aws-cdk-lib.aws_iam.IPrincipal</code> | The principal this Lambda Function is running as. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.property.isBoundToVpc">isBoundToVpc</a></code> | <code>boolean</code> | Whether or not this Lambda function was bound to a VPC. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.property.latestVersion">latestVersion</a></code> | <code>aws-cdk-lib.aws_lambda.IVersion</code> | The `$LATEST` version of this function. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.property.permissionsNode">permissionsNode</a></code> | <code>constructs.Node</code> | The construct node where permissions are attached. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.property.resourceArnsForGrantInvoke">resourceArnsForGrantInvoke</a></code> | <code>string[]</code> | The ARN(s) to put into the resource field of the generated IAM policy for grantInvoke(). |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.property.role">role</a></code> | <code>aws-cdk-lib.aws_iam.IRole</code> | Execution role associated with this function. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.property.currentVersion">currentVersion</a></code> | <code>aws-cdk-lib.aws_lambda.Version</code> | Returns a `lambda.Version` which represents the current version of this Lambda function. A new version will be created every time the function's configuration changes. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.property.logGroup">logGroup</a></code> | <code>aws-cdk-lib.aws_logs.ILogGroup</code> | The LogGroup where the Lambda function's logs are made available. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.property.runtime">runtime</a></code> | <code>aws-cdk-lib.aws_lambda.Runtime</code> | The runtime configured for this lambda. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.property.deadLetterQueue">deadLetterQueue</a></code> | <code>aws-cdk-lib.aws_sqs.IQueue</code> | The DLQ (as queue) associated with this Lambda Function (this is an optional attribute). |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.property.deadLetterTopic">deadLetterTopic</a></code> | <code>aws-cdk-lib.aws_sns.ITopic</code> | The DLQ (as topic) associated with this Lambda Function (this is an optional attribute). |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunction.property.timeout">timeout</a></code> | <code>aws-cdk-lib.Duration</code> | The timeout configured for this lambda. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.env">env</a></code> | <code>aws-cdk-lib.ResourceEnvironment</code> | The environment this resource belongs to. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.stack">stack</a></code> | <code>aws-cdk-lib.Stack</code> | The stack in which this resource is defined. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.architecture">architecture</a></code> | <code>aws-cdk-lib.aws_lambda.Architecture</code> | The architecture of this Lambda Function (this is an optional attribute and defaults to X86_64). |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.connections">connections</a></code> | <code>aws-cdk-lib.aws_ec2.Connections</code> | Access the Connections object. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.functionArn">functionArn</a></code> | <code>string</code> | ARN of this function. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.functionName">functionName</a></code> | <code>string</code> | Name of this function. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.grantPrincipal">grantPrincipal</a></code> | <code>aws-cdk-lib.aws_iam.IPrincipal</code> | The principal this Lambda Function is running as. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.isBoundToVpc">isBoundToVpc</a></code> | <code>boolean</code> | Whether or not this Lambda function was bound to a VPC. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.latestVersion">latestVersion</a></code> | <code>aws-cdk-lib.aws_lambda.IVersion</code> | The `$LATEST` version of this function. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.permissionsNode">permissionsNode</a></code> | <code>constructs.Node</code> | The construct node where permissions are attached. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.resourceArnsForGrantInvoke">resourceArnsForGrantInvoke</a></code> | <code>string[]</code> | The ARN(s) to put into the resource field of the generated IAM policy for grantInvoke(). |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.role">role</a></code> | <code>aws-cdk-lib.aws_iam.IRole</code> | Execution role associated with this function. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.currentVersion">currentVersion</a></code> | <code>aws-cdk-lib.aws_lambda.Version</code> | Returns a `lambda.Version` which represents the current version of this Lambda function. A new version will be created every time the function's configuration changes. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.logGroup">logGroup</a></code> | <code>aws-cdk-lib.aws_logs.ILogGroup</code> | The LogGroup where the Lambda function's logs are made available. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.runtime">runtime</a></code> | <code>aws-cdk-lib.aws_lambda.Runtime</code> | The runtime configured for this lambda. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.deadLetterQueue">deadLetterQueue</a></code> | <code>aws-cdk-lib.aws_sqs.IQueue</code> | The DLQ (as queue) associated with this Lambda Function (this is an optional attribute). |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.deadLetterTopic">deadLetterTopic</a></code> | <code>aws-cdk-lib.aws_sns.ITopic</code> | The DLQ (as topic) associated with this Lambda Function (this is an optional attribute). |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.timeout">timeout</a></code> | <code>aws-cdk-lib.Duration</code> | The timeout configured for this lambda. |
 
 ---
 
-##### `node`<sup>Required</sup> <a name="node" id="cdk-aws-lambda-dotnet.DotNetFunction.property.node"></a>
+##### `node`<sup>Required</sup> <a name="node" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.node"></a>
 
 ```typescript
 public readonly node: Node;
@@ -778,7 +778,7 @@ The tree node.
 
 ---
 
-##### `env`<sup>Required</sup> <a name="env" id="cdk-aws-lambda-dotnet.DotNetFunction.property.env"></a>
+##### `env`<sup>Required</sup> <a name="env" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.env"></a>
 
 ```typescript
 public readonly env: ResourceEnvironment;
@@ -797,7 +797,7 @@ that might be different than the stack they were imported into.
 
 ---
 
-##### `stack`<sup>Required</sup> <a name="stack" id="cdk-aws-lambda-dotnet.DotNetFunction.property.stack"></a>
+##### `stack`<sup>Required</sup> <a name="stack" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.stack"></a>
 
 ```typescript
 public readonly stack: Stack;
@@ -809,7 +809,7 @@ The stack in which this resource is defined.
 
 ---
 
-##### `architecture`<sup>Required</sup> <a name="architecture" id="cdk-aws-lambda-dotnet.DotNetFunction.property.architecture"></a>
+##### `architecture`<sup>Required</sup> <a name="architecture" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.architecture"></a>
 
 ```typescript
 public readonly architecture: Architecture;
@@ -821,7 +821,7 @@ The architecture of this Lambda Function (this is an optional attribute and defa
 
 ---
 
-##### `connections`<sup>Required</sup> <a name="connections" id="cdk-aws-lambda-dotnet.DotNetFunction.property.connections"></a>
+##### `connections`<sup>Required</sup> <a name="connections" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.connections"></a>
 
 ```typescript
 public readonly connections: Connections;
@@ -835,7 +835,7 @@ Will fail if not a VPC-enabled Lambda Function
 
 ---
 
-##### `functionArn`<sup>Required</sup> <a name="functionArn" id="cdk-aws-lambda-dotnet.DotNetFunction.property.functionArn"></a>
+##### `functionArn`<sup>Required</sup> <a name="functionArn" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.functionArn"></a>
 
 ```typescript
 public readonly functionArn: string;
@@ -847,7 +847,7 @@ ARN of this function.
 
 ---
 
-##### `functionName`<sup>Required</sup> <a name="functionName" id="cdk-aws-lambda-dotnet.DotNetFunction.property.functionName"></a>
+##### `functionName`<sup>Required</sup> <a name="functionName" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.functionName"></a>
 
 ```typescript
 public readonly functionName: string;
@@ -859,7 +859,7 @@ Name of this function.
 
 ---
 
-##### `grantPrincipal`<sup>Required</sup> <a name="grantPrincipal" id="cdk-aws-lambda-dotnet.DotNetFunction.property.grantPrincipal"></a>
+##### `grantPrincipal`<sup>Required</sup> <a name="grantPrincipal" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.grantPrincipal"></a>
 
 ```typescript
 public readonly grantPrincipal: IPrincipal;
@@ -871,7 +871,7 @@ The principal this Lambda Function is running as.
 
 ---
 
-##### `isBoundToVpc`<sup>Required</sup> <a name="isBoundToVpc" id="cdk-aws-lambda-dotnet.DotNetFunction.property.isBoundToVpc"></a>
+##### `isBoundToVpc`<sup>Required</sup> <a name="isBoundToVpc" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.isBoundToVpc"></a>
 
 ```typescript
 public readonly isBoundToVpc: boolean;
@@ -885,7 +885,7 @@ If this is is `false`, trying to access the `connections` object will fail.
 
 ---
 
-##### `latestVersion`<sup>Required</sup> <a name="latestVersion" id="cdk-aws-lambda-dotnet.DotNetFunction.property.latestVersion"></a>
+##### `latestVersion`<sup>Required</sup> <a name="latestVersion" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.latestVersion"></a>
 
 ```typescript
 public readonly latestVersion: IVersion;
@@ -904,7 +904,7 @@ function configuration, use `lambdaFunction.currentVersion` instead.
 
 ---
 
-##### `permissionsNode`<sup>Required</sup> <a name="permissionsNode" id="cdk-aws-lambda-dotnet.DotNetFunction.property.permissionsNode"></a>
+##### `permissionsNode`<sup>Required</sup> <a name="permissionsNode" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.permissionsNode"></a>
 
 ```typescript
 public readonly permissionsNode: Node;
@@ -916,7 +916,7 @@ The construct node where permissions are attached.
 
 ---
 
-##### `resourceArnsForGrantInvoke`<sup>Required</sup> <a name="resourceArnsForGrantInvoke" id="cdk-aws-lambda-dotnet.DotNetFunction.property.resourceArnsForGrantInvoke"></a>
+##### `resourceArnsForGrantInvoke`<sup>Required</sup> <a name="resourceArnsForGrantInvoke" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.resourceArnsForGrantInvoke"></a>
 
 ```typescript
 public readonly resourceArnsForGrantInvoke: string[];
@@ -928,7 +928,7 @@ The ARN(s) to put into the resource field of the generated IAM policy for grantI
 
 ---
 
-##### `role`<sup>Optional</sup> <a name="role" id="cdk-aws-lambda-dotnet.DotNetFunction.property.role"></a>
+##### `role`<sup>Optional</sup> <a name="role" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.role"></a>
 
 ```typescript
 public readonly role: IRole;
@@ -940,7 +940,7 @@ Execution role associated with this function.
 
 ---
 
-##### `currentVersion`<sup>Required</sup> <a name="currentVersion" id="cdk-aws-lambda-dotnet.DotNetFunction.property.currentVersion"></a>
+##### `currentVersion`<sup>Required</sup> <a name="currentVersion" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.currentVersion"></a>
 
 ```typescript
 public readonly currentVersion: Version;
@@ -955,7 +955,7 @@ prop when initializing the `lambda.Function`.
 
 ---
 
-##### `logGroup`<sup>Required</sup> <a name="logGroup" id="cdk-aws-lambda-dotnet.DotNetFunction.property.logGroup"></a>
+##### `logGroup`<sup>Required</sup> <a name="logGroup" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.logGroup"></a>
 
 ```typescript
 public readonly logGroup: ILogGroup;
@@ -974,7 +974,7 @@ to never expire even if it was configured with a different value.
 
 ---
 
-##### `runtime`<sup>Required</sup> <a name="runtime" id="cdk-aws-lambda-dotnet.DotNetFunction.property.runtime"></a>
+##### `runtime`<sup>Required</sup> <a name="runtime" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.runtime"></a>
 
 ```typescript
 public readonly runtime: Runtime;
@@ -986,7 +986,7 @@ The runtime configured for this lambda.
 
 ---
 
-##### `deadLetterQueue`<sup>Optional</sup> <a name="deadLetterQueue" id="cdk-aws-lambda-dotnet.DotNetFunction.property.deadLetterQueue"></a>
+##### `deadLetterQueue`<sup>Optional</sup> <a name="deadLetterQueue" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.deadLetterQueue"></a>
 
 ```typescript
 public readonly deadLetterQueue: IQueue;
@@ -998,7 +998,7 @@ The DLQ (as queue) associated with this Lambda Function (this is an optional att
 
 ---
 
-##### `deadLetterTopic`<sup>Optional</sup> <a name="deadLetterTopic" id="cdk-aws-lambda-dotnet.DotNetFunction.property.deadLetterTopic"></a>
+##### `deadLetterTopic`<sup>Optional</sup> <a name="deadLetterTopic" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.deadLetterTopic"></a>
 
 ```typescript
 public readonly deadLetterTopic: ITopic;
@@ -1010,7 +1010,7 @@ The DLQ (as topic) associated with this Lambda Function (this is an optional att
 
 ---
 
-##### `timeout`<sup>Optional</sup> <a name="timeout" id="cdk-aws-lambda-dotnet.DotNetFunction.property.timeout"></a>
+##### `timeout`<sup>Optional</sup> <a name="timeout" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunction.property.timeout"></a>
 
 ```typescript
 public readonly timeout: Duration;
@@ -1025,14 +1025,14 @@ The timeout configured for this lambda.
 
 ## Structs <a name="Structs" id="Structs"></a>
 
-### BundlingOptions <a name="BundlingOptions" id="cdk-aws-lambda-dotnet.BundlingOptions"></a>
+### BundlingOptions <a name="BundlingOptions" id="@xaaskit-cdk/aws-lambda-dotnet.BundlingOptions"></a>
 
 Bundling options.
 
-#### Initializer <a name="Initializer" id="cdk-aws-lambda-dotnet.BundlingOptions.Initializer"></a>
+#### Initializer <a name="Initializer" id="@xaaskit-cdk/aws-lambda-dotnet.BundlingOptions.Initializer"></a>
 
 ```typescript
-import { BundlingOptions } from 'cdk-aws-lambda-dotnet'
+import { BundlingOptions } from '@xaaskit-cdk/aws-lambda-dotnet'
 
 const bundlingOptions: BundlingOptions = { ... }
 ```
@@ -1041,17 +1041,17 @@ const bundlingOptions: BundlingOptions = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-aws-lambda-dotnet.BundlingOptions.property.assetHash">assetHash</a></code> | <code>string</code> | Specify a custom hash for this asset. |
-| <code><a href="#cdk-aws-lambda-dotnet.BundlingOptions.property.assetHashType">assetHashType</a></code> | <code>aws-cdk-lib.AssetHashType</code> | Determines how the asset hash is calculated. Assets will get rebuilt and uploaded only if their hash has changed. |
-| <code><a href="#cdk-aws-lambda-dotnet.BundlingOptions.property.buildArgs">buildArgs</a></code> | <code>{[ key: string ]: string}</code> | Build arguments to pass when building the bundling image. |
-| <code><a href="#cdk-aws-lambda-dotnet.BundlingOptions.property.commandHooks">commandHooks</a></code> | <code><a href="#cdk-aws-lambda-dotnet.ICommandHooks">ICommandHooks</a></code> | Command hooks. |
-| <code><a href="#cdk-aws-lambda-dotnet.BundlingOptions.property.dockerImage">dockerImage</a></code> | <code>aws-cdk-lib.DockerImage</code> | A custom bundling Docker image. |
-| <code><a href="#cdk-aws-lambda-dotnet.BundlingOptions.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Environment variables defined when go runs. |
-| <code><a href="#cdk-aws-lambda-dotnet.BundlingOptions.property.forcedDockerBundling">forcedDockerBundling</a></code> | <code>boolean</code> | Force bundling in a Docker container even if local bundling is possible. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.BundlingOptions.property.assetHash">assetHash</a></code> | <code>string</code> | Specify a custom hash for this asset. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.BundlingOptions.property.assetHashType">assetHashType</a></code> | <code>aws-cdk-lib.AssetHashType</code> | Determines how the asset hash is calculated. Assets will get rebuilt and uploaded only if their hash has changed. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.BundlingOptions.property.buildArgs">buildArgs</a></code> | <code>{[ key: string ]: string}</code> | Build arguments to pass when building the bundling image. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.BundlingOptions.property.commandHooks">commandHooks</a></code> | <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.ICommandHooks">ICommandHooks</a></code> | Command hooks. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.BundlingOptions.property.dockerImage">dockerImage</a></code> | <code>aws-cdk-lib.DockerImage</code> | A custom bundling Docker image. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.BundlingOptions.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Environment variables defined when go runs. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.BundlingOptions.property.forcedDockerBundling">forcedDockerBundling</a></code> | <code>boolean</code> | Force bundling in a Docker container even if local bundling is possible. |
 
 ---
 
-##### `assetHash`<sup>Optional</sup> <a name="assetHash" id="cdk-aws-lambda-dotnet.BundlingOptions.property.assetHash"></a>
+##### `assetHash`<sup>Optional</sup> <a name="assetHash" id="@xaaskit-cdk/aws-lambda-dotnet.BundlingOptions.property.assetHash"></a>
 
 ```typescript
 public readonly assetHash: string;
@@ -1075,7 +1075,7 @@ possible that some deployments will not be invalidated.
 
 ---
 
-##### `assetHashType`<sup>Optional</sup> <a name="assetHashType" id="cdk-aws-lambda-dotnet.BundlingOptions.property.assetHashType"></a>
+##### `assetHashType`<sup>Optional</sup> <a name="assetHashType" id="@xaaskit-cdk/aws-lambda-dotnet.BundlingOptions.property.assetHashType"></a>
 
 ```typescript
 public readonly assetHashType: AssetHashType;
@@ -1101,7 +1101,7 @@ all the functions to be rebuilt and uploaded.
 
 ---
 
-##### `buildArgs`<sup>Optional</sup> <a name="buildArgs" id="cdk-aws-lambda-dotnet.BundlingOptions.property.buildArgs"></a>
+##### `buildArgs`<sup>Optional</sup> <a name="buildArgs" id="@xaaskit-cdk/aws-lambda-dotnet.BundlingOptions.property.buildArgs"></a>
 
 ```typescript
 public readonly buildArgs: {[ key: string ]: string};
@@ -1114,20 +1114,20 @@ Build arguments to pass when building the bundling image.
 
 ---
 
-##### `commandHooks`<sup>Optional</sup> <a name="commandHooks" id="cdk-aws-lambda-dotnet.BundlingOptions.property.commandHooks"></a>
+##### `commandHooks`<sup>Optional</sup> <a name="commandHooks" id="@xaaskit-cdk/aws-lambda-dotnet.BundlingOptions.property.commandHooks"></a>
 
 ```typescript
 public readonly commandHooks: ICommandHooks;
 ```
 
-- *Type:* <a href="#cdk-aws-lambda-dotnet.ICommandHooks">ICommandHooks</a>
+- *Type:* <a href="#@xaaskit-cdk/aws-lambda-dotnet.ICommandHooks">ICommandHooks</a>
 - *Default:* do not run additional commands
 
 Command hooks.
 
 ---
 
-##### `dockerImage`<sup>Optional</sup> <a name="dockerImage" id="cdk-aws-lambda-dotnet.BundlingOptions.property.dockerImage"></a>
+##### `dockerImage`<sup>Optional</sup> <a name="dockerImage" id="@xaaskit-cdk/aws-lambda-dotnet.BundlingOptions.property.dockerImage"></a>
 
 ```typescript
 public readonly dockerImage: DockerImage;
@@ -1140,7 +1140,7 @@ A custom bundling Docker image.
 
 ---
 
-##### `environment`<sup>Optional</sup> <a name="environment" id="cdk-aws-lambda-dotnet.BundlingOptions.property.environment"></a>
+##### `environment`<sup>Optional</sup> <a name="environment" id="@xaaskit-cdk/aws-lambda-dotnet.BundlingOptions.property.environment"></a>
 
 ```typescript
 public readonly environment: {[ key: string ]: string};
@@ -1153,7 +1153,7 @@ Environment variables defined when go runs.
 
 ---
 
-##### `forcedDockerBundling`<sup>Optional</sup> <a name="forcedDockerBundling" id="cdk-aws-lambda-dotnet.BundlingOptions.property.forcedDockerBundling"></a>
+##### `forcedDockerBundling`<sup>Optional</sup> <a name="forcedDockerBundling" id="@xaaskit-cdk/aws-lambda-dotnet.BundlingOptions.property.forcedDockerBundling"></a>
 
 ```typescript
 public readonly forcedDockerBundling: boolean;
@@ -1166,14 +1166,14 @@ Force bundling in a Docker container even if local bundling is possible.
 
 ---
 
-### DotNetFunctionProps <a name="DotNetFunctionProps" id="cdk-aws-lambda-dotnet.DotNetFunctionProps"></a>
+### DotNetFunctionProps <a name="DotNetFunctionProps" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps"></a>
 
 Properties for a .NET Function.
 
-#### Initializer <a name="Initializer" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.Initializer"></a>
+#### Initializer <a name="Initializer" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.Initializer"></a>
 
 ```typescript
-import { DotNetFunctionProps } from 'cdk-aws-lambda-dotnet'
+import { DotNetFunctionProps } from '@xaaskit-cdk/aws-lambda-dotnet'
 
 const dotNetFunctionProps: DotNetFunctionProps = { ... }
 ```
@@ -1182,50 +1182,50 @@ const dotNetFunctionProps: DotNetFunctionProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.maxEventAge">maxEventAge</a></code> | <code>aws-cdk-lib.Duration</code> | The maximum age of a request that Lambda sends to a function for processing. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.onFailure">onFailure</a></code> | <code>aws-cdk-lib.aws_lambda.IDestination</code> | The destination for failed invocations. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.onSuccess">onSuccess</a></code> | <code>aws-cdk-lib.aws_lambda.IDestination</code> | The destination for successful invocations. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.retryAttempts">retryAttempts</a></code> | <code>number</code> | The maximum number of times to retry when the function returns an error. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.allowAllOutbound">allowAllOutbound</a></code> | <code>boolean</code> | Whether to allow the Lambda to send all network traffic. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.allowPublicSubnet">allowPublicSubnet</a></code> | <code>boolean</code> | Lambda Functions in a public subnet can NOT access the internet. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.architecture">architecture</a></code> | <code>aws-cdk-lib.aws_lambda.Architecture</code> | The system architectures compatible with this lambda function. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.codeSigningConfig">codeSigningConfig</a></code> | <code>aws-cdk-lib.aws_lambda.ICodeSigningConfig</code> | Code signing config associated with this function. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.currentVersionOptions">currentVersionOptions</a></code> | <code>aws-cdk-lib.aws_lambda.VersionOptions</code> | Options for the `lambda.Version` resource automatically created by the `fn.currentVersion` method. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.deadLetterQueue">deadLetterQueue</a></code> | <code>aws-cdk-lib.aws_sqs.IQueue</code> | The SQS queue to use if DLQ is enabled. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.deadLetterQueueEnabled">deadLetterQueueEnabled</a></code> | <code>boolean</code> | Enabled DLQ. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.deadLetterTopic">deadLetterTopic</a></code> | <code>aws-cdk-lib.aws_sns.ITopic</code> | The SNS topic to use as a DLQ. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.description">description</a></code> | <code>string</code> | A description of the function. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Key-value pairs that Lambda caches and makes available for your Lambda functions. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.environmentEncryption">environmentEncryption</a></code> | <code>aws-cdk-lib.aws_kms.IKey</code> | The AWS KMS key that's used to encrypt your function's environment variables. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.ephemeralStorageSize">ephemeralStorageSize</a></code> | <code>aws-cdk-lib.Size</code> | The size of the function’s /tmp directory in MiB. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.events">events</a></code> | <code>aws-cdk-lib.aws_lambda.IEventSource[]</code> | Event sources for this function. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.filesystem">filesystem</a></code> | <code>aws-cdk-lib.aws_lambda.FileSystem</code> | The filesystem configuration for the lambda function. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.functionName">functionName</a></code> | <code>string</code> | A name for the function. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.initialPolicy">initialPolicy</a></code> | <code>aws-cdk-lib.aws_iam.PolicyStatement[]</code> | Initial policy statements to add to the created Lambda Role. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.insightsVersion">insightsVersion</a></code> | <code>aws-cdk-lib.aws_lambda.LambdaInsightsVersion</code> | Specify the version of CloudWatch Lambda insights to use for monitoring. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.layers">layers</a></code> | <code>aws-cdk-lib.aws_lambda.ILayerVersion[]</code> | A list of layers to add to the function's execution environment. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.logRetention">logRetention</a></code> | <code>aws-cdk-lib.aws_logs.RetentionDays</code> | The number of days log events are kept in CloudWatch Logs. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.logRetentionRetryOptions">logRetentionRetryOptions</a></code> | <code>aws-cdk-lib.aws_lambda.LogRetentionRetryOptions</code> | When log retention is specified, a custom resource attempts to create the CloudWatch log group. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.logRetentionRole">logRetentionRole</a></code> | <code>aws-cdk-lib.aws_iam.IRole</code> | The IAM role for the Lambda function associated with the custom resource that sets the retention policy. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.memorySize">memorySize</a></code> | <code>number</code> | The amount of memory, in MB, that is allocated to your Lambda function. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.profiling">profiling</a></code> | <code>boolean</code> | Enable profiling. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.profilingGroup">profilingGroup</a></code> | <code>aws-cdk-lib.aws_codeguruprofiler.IProfilingGroup</code> | Profiling Group. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.reservedConcurrentExecutions">reservedConcurrentExecutions</a></code> | <code>number</code> | The maximum of concurrent executions you want to reserve for the function. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.role">role</a></code> | <code>aws-cdk-lib.aws_iam.IRole</code> | Lambda execution role. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.securityGroups">securityGroups</a></code> | <code>aws-cdk-lib.aws_ec2.ISecurityGroup[]</code> | The list of security groups to associate with the Lambda's network interfaces. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.timeout">timeout</a></code> | <code>aws-cdk-lib.Duration</code> | The function execution time (in seconds) after which Lambda terminates the function. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.tracing">tracing</a></code> | <code>aws-cdk-lib.aws_lambda.Tracing</code> | Enable AWS X-Ray Tracing for Lambda Function. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.vpc">vpc</a></code> | <code>aws-cdk-lib.aws_ec2.IVpc</code> | VPC network to place Lambda network interfaces. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.vpcSubnets">vpcSubnets</a></code> | <code>aws-cdk-lib.aws_ec2.SubnetSelection</code> | Where to place the network interfaces within the VPC. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.projectDir">projectDir</a></code> | <code>string</code> | Directory containing your .csproj file. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.bundling">bundling</a></code> | <code><a href="#cdk-aws-lambda-dotnet.BundlingOptions">BundlingOptions</a></code> | Bundling options. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.handler">handler</a></code> | <code>string</code> | The name of the method within your code that Lambda calls to execute your function. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.runtime">runtime</a></code> | <code>aws-cdk-lib.aws_lambda.Runtime</code> | The runtime environment. |
-| <code><a href="#cdk-aws-lambda-dotnet.DotNetFunctionProps.property.solutionDir">solutionDir</a></code> | <code>string</code> | Directory containing your .sln file. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.maxEventAge">maxEventAge</a></code> | <code>aws-cdk-lib.Duration</code> | The maximum age of a request that Lambda sends to a function for processing. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.onFailure">onFailure</a></code> | <code>aws-cdk-lib.aws_lambda.IDestination</code> | The destination for failed invocations. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.onSuccess">onSuccess</a></code> | <code>aws-cdk-lib.aws_lambda.IDestination</code> | The destination for successful invocations. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.retryAttempts">retryAttempts</a></code> | <code>number</code> | The maximum number of times to retry when the function returns an error. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.allowAllOutbound">allowAllOutbound</a></code> | <code>boolean</code> | Whether to allow the Lambda to send all network traffic. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.allowPublicSubnet">allowPublicSubnet</a></code> | <code>boolean</code> | Lambda Functions in a public subnet can NOT access the internet. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.architecture">architecture</a></code> | <code>aws-cdk-lib.aws_lambda.Architecture</code> | The system architectures compatible with this lambda function. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.codeSigningConfig">codeSigningConfig</a></code> | <code>aws-cdk-lib.aws_lambda.ICodeSigningConfig</code> | Code signing config associated with this function. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.currentVersionOptions">currentVersionOptions</a></code> | <code>aws-cdk-lib.aws_lambda.VersionOptions</code> | Options for the `lambda.Version` resource automatically created by the `fn.currentVersion` method. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.deadLetterQueue">deadLetterQueue</a></code> | <code>aws-cdk-lib.aws_sqs.IQueue</code> | The SQS queue to use if DLQ is enabled. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.deadLetterQueueEnabled">deadLetterQueueEnabled</a></code> | <code>boolean</code> | Enabled DLQ. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.deadLetterTopic">deadLetterTopic</a></code> | <code>aws-cdk-lib.aws_sns.ITopic</code> | The SNS topic to use as a DLQ. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.description">description</a></code> | <code>string</code> | A description of the function. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Key-value pairs that Lambda caches and makes available for your Lambda functions. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.environmentEncryption">environmentEncryption</a></code> | <code>aws-cdk-lib.aws_kms.IKey</code> | The AWS KMS key that's used to encrypt your function's environment variables. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.ephemeralStorageSize">ephemeralStorageSize</a></code> | <code>aws-cdk-lib.Size</code> | The size of the function’s /tmp directory in MiB. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.events">events</a></code> | <code>aws-cdk-lib.aws_lambda.IEventSource[]</code> | Event sources for this function. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.filesystem">filesystem</a></code> | <code>aws-cdk-lib.aws_lambda.FileSystem</code> | The filesystem configuration for the lambda function. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.functionName">functionName</a></code> | <code>string</code> | A name for the function. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.initialPolicy">initialPolicy</a></code> | <code>aws-cdk-lib.aws_iam.PolicyStatement[]</code> | Initial policy statements to add to the created Lambda Role. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.insightsVersion">insightsVersion</a></code> | <code>aws-cdk-lib.aws_lambda.LambdaInsightsVersion</code> | Specify the version of CloudWatch Lambda insights to use for monitoring. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.layers">layers</a></code> | <code>aws-cdk-lib.aws_lambda.ILayerVersion[]</code> | A list of layers to add to the function's execution environment. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.logRetention">logRetention</a></code> | <code>aws-cdk-lib.aws_logs.RetentionDays</code> | The number of days log events are kept in CloudWatch Logs. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.logRetentionRetryOptions">logRetentionRetryOptions</a></code> | <code>aws-cdk-lib.aws_lambda.LogRetentionRetryOptions</code> | When log retention is specified, a custom resource attempts to create the CloudWatch log group. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.logRetentionRole">logRetentionRole</a></code> | <code>aws-cdk-lib.aws_iam.IRole</code> | The IAM role for the Lambda function associated with the custom resource that sets the retention policy. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.memorySize">memorySize</a></code> | <code>number</code> | The amount of memory, in MB, that is allocated to your Lambda function. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.profiling">profiling</a></code> | <code>boolean</code> | Enable profiling. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.profilingGroup">profilingGroup</a></code> | <code>aws-cdk-lib.aws_codeguruprofiler.IProfilingGroup</code> | Profiling Group. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.reservedConcurrentExecutions">reservedConcurrentExecutions</a></code> | <code>number</code> | The maximum of concurrent executions you want to reserve for the function. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.role">role</a></code> | <code>aws-cdk-lib.aws_iam.IRole</code> | Lambda execution role. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.securityGroups">securityGroups</a></code> | <code>aws-cdk-lib.aws_ec2.ISecurityGroup[]</code> | The list of security groups to associate with the Lambda's network interfaces. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.timeout">timeout</a></code> | <code>aws-cdk-lib.Duration</code> | The function execution time (in seconds) after which Lambda terminates the function. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.tracing">tracing</a></code> | <code>aws-cdk-lib.aws_lambda.Tracing</code> | Enable AWS X-Ray Tracing for Lambda Function. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.vpc">vpc</a></code> | <code>aws-cdk-lib.aws_ec2.IVpc</code> | VPC network to place Lambda network interfaces. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.vpcSubnets">vpcSubnets</a></code> | <code>aws-cdk-lib.aws_ec2.SubnetSelection</code> | Where to place the network interfaces within the VPC. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.projectDir">projectDir</a></code> | <code>string</code> | Directory containing your .csproj file. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.bundling">bundling</a></code> | <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.BundlingOptions">BundlingOptions</a></code> | Bundling options. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.handler">handler</a></code> | <code>string</code> | The name of the method within your code that Lambda calls to execute your function. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.runtime">runtime</a></code> | <code>aws-cdk-lib.aws_lambda.Runtime</code> | The runtime environment. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.solutionDir">solutionDir</a></code> | <code>string</code> | Directory containing your .sln file. |
 
 ---
 
-##### `maxEventAge`<sup>Optional</sup> <a name="maxEventAge" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.maxEventAge"></a>
+##### `maxEventAge`<sup>Optional</sup> <a name="maxEventAge" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.maxEventAge"></a>
 
 ```typescript
 public readonly maxEventAge: Duration;
@@ -1241,7 +1241,7 @@ Maximum: 6 hours
 
 ---
 
-##### `onFailure`<sup>Optional</sup> <a name="onFailure" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.onFailure"></a>
+##### `onFailure`<sup>Optional</sup> <a name="onFailure" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.onFailure"></a>
 
 ```typescript
 public readonly onFailure: IDestination;
@@ -1254,7 +1254,7 @@ The destination for failed invocations.
 
 ---
 
-##### `onSuccess`<sup>Optional</sup> <a name="onSuccess" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.onSuccess"></a>
+##### `onSuccess`<sup>Optional</sup> <a name="onSuccess" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.onSuccess"></a>
 
 ```typescript
 public readonly onSuccess: IDestination;
@@ -1267,7 +1267,7 @@ The destination for successful invocations.
 
 ---
 
-##### `retryAttempts`<sup>Optional</sup> <a name="retryAttempts" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.retryAttempts"></a>
+##### `retryAttempts`<sup>Optional</sup> <a name="retryAttempts" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.retryAttempts"></a>
 
 ```typescript
 public readonly retryAttempts: number;
@@ -1283,7 +1283,7 @@ Maximum: 2
 
 ---
 
-##### `allowAllOutbound`<sup>Optional</sup> <a name="allowAllOutbound" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.allowAllOutbound"></a>
+##### `allowAllOutbound`<sup>Optional</sup> <a name="allowAllOutbound" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.allowAllOutbound"></a>
 
 ```typescript
 public readonly allowAllOutbound: boolean;
@@ -1299,7 +1299,7 @@ Lambda to connect to network targets.
 
 ---
 
-##### `allowPublicSubnet`<sup>Optional</sup> <a name="allowPublicSubnet" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.allowPublicSubnet"></a>
+##### `allowPublicSubnet`<sup>Optional</sup> <a name="allowPublicSubnet" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.allowPublicSubnet"></a>
 
 ```typescript
 public readonly allowPublicSubnet: boolean;
@@ -1316,7 +1316,7 @@ Use this property to acknowledge this limitation and still place the function in
 
 ---
 
-##### `architecture`<sup>Optional</sup> <a name="architecture" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.architecture"></a>
+##### `architecture`<sup>Optional</sup> <a name="architecture" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.architecture"></a>
 
 ```typescript
 public readonly architecture: Architecture;
@@ -1329,7 +1329,7 @@ The system architectures compatible with this lambda function.
 
 ---
 
-##### `codeSigningConfig`<sup>Optional</sup> <a name="codeSigningConfig" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.codeSigningConfig"></a>
+##### `codeSigningConfig`<sup>Optional</sup> <a name="codeSigningConfig" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.codeSigningConfig"></a>
 
 ```typescript
 public readonly codeSigningConfig: ICodeSigningConfig;
@@ -1342,7 +1342,7 @@ Code signing config associated with this function.
 
 ---
 
-##### `currentVersionOptions`<sup>Optional</sup> <a name="currentVersionOptions" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.currentVersionOptions"></a>
+##### `currentVersionOptions`<sup>Optional</sup> <a name="currentVersionOptions" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.currentVersionOptions"></a>
 
 ```typescript
 public readonly currentVersionOptions: VersionOptions;
@@ -1355,7 +1355,7 @@ Options for the `lambda.Version` resource automatically created by the `fn.curre
 
 ---
 
-##### `deadLetterQueue`<sup>Optional</sup> <a name="deadLetterQueue" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.deadLetterQueue"></a>
+##### `deadLetterQueue`<sup>Optional</sup> <a name="deadLetterQueue" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.deadLetterQueue"></a>
 
 ```typescript
 public readonly deadLetterQueue: IQueue;
@@ -1370,7 +1370,7 @@ If SNS topic is desired, specify `deadLetterTopic` property instead.
 
 ---
 
-##### `deadLetterQueueEnabled`<sup>Optional</sup> <a name="deadLetterQueueEnabled" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.deadLetterQueueEnabled"></a>
+##### `deadLetterQueueEnabled`<sup>Optional</sup> <a name="deadLetterQueueEnabled" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.deadLetterQueueEnabled"></a>
 
 ```typescript
 public readonly deadLetterQueueEnabled: boolean;
@@ -1386,7 +1386,7 @@ an SQS queue with default options will be defined for your Function.
 
 ---
 
-##### `deadLetterTopic`<sup>Optional</sup> <a name="deadLetterTopic" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.deadLetterTopic"></a>
+##### `deadLetterTopic`<sup>Optional</sup> <a name="deadLetterTopic" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.deadLetterTopic"></a>
 
 ```typescript
 public readonly deadLetterTopic: ITopic;
@@ -1402,7 +1402,7 @@ rather than an SNS topic. Using an SNS topic as a DLQ requires this property to 
 
 ---
 
-##### `description`<sup>Optional</sup> <a name="description" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.description"></a>
+##### `description`<sup>Optional</sup> <a name="description" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.description"></a>
 
 ```typescript
 public readonly description: string;
@@ -1415,7 +1415,7 @@ A description of the function.
 
 ---
 
-##### `environment`<sup>Optional</sup> <a name="environment" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.environment"></a>
+##### `environment`<sup>Optional</sup> <a name="environment" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.environment"></a>
 
 ```typescript
 public readonly environment: {[ key: string ]: string};
@@ -1432,7 +1432,7 @@ Lambda function source code.
 
 ---
 
-##### `environmentEncryption`<sup>Optional</sup> <a name="environmentEncryption" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.environmentEncryption"></a>
+##### `environmentEncryption`<sup>Optional</sup> <a name="environmentEncryption" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.environmentEncryption"></a>
 
 ```typescript
 public readonly environmentEncryption: IKey;
@@ -1445,7 +1445,7 @@ The AWS KMS key that's used to encrypt your function's environment variables.
 
 ---
 
-##### `ephemeralStorageSize`<sup>Optional</sup> <a name="ephemeralStorageSize" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.ephemeralStorageSize"></a>
+##### `ephemeralStorageSize`<sup>Optional</sup> <a name="ephemeralStorageSize" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.ephemeralStorageSize"></a>
 
 ```typescript
 public readonly ephemeralStorageSize: Size;
@@ -1458,7 +1458,7 @@ The size of the function’s /tmp directory in MiB.
 
 ---
 
-##### `events`<sup>Optional</sup> <a name="events" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.events"></a>
+##### `events`<sup>Optional</sup> <a name="events" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.events"></a>
 
 ```typescript
 public readonly events: IEventSource[];
@@ -1473,7 +1473,7 @@ You can also add event sources using `addEventSource`.
 
 ---
 
-##### `filesystem`<sup>Optional</sup> <a name="filesystem" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.filesystem"></a>
+##### `filesystem`<sup>Optional</sup> <a name="filesystem" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.filesystem"></a>
 
 ```typescript
 public readonly filesystem: FileSystem;
@@ -1486,7 +1486,7 @@ The filesystem configuration for the lambda function.
 
 ---
 
-##### `functionName`<sup>Optional</sup> <a name="functionName" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.functionName"></a>
+##### `functionName`<sup>Optional</sup> <a name="functionName" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.functionName"></a>
 
 ```typescript
 public readonly functionName: string;
@@ -1499,7 +1499,7 @@ A name for the function.
 
 ---
 
-##### `initialPolicy`<sup>Optional</sup> <a name="initialPolicy" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.initialPolicy"></a>
+##### `initialPolicy`<sup>Optional</sup> <a name="initialPolicy" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.initialPolicy"></a>
 
 ```typescript
 public readonly initialPolicy: PolicyStatement[];
@@ -1514,7 +1514,7 @@ You can call `addToRolePolicy` to the created lambda to add statements post crea
 
 ---
 
-##### `insightsVersion`<sup>Optional</sup> <a name="insightsVersion" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.insightsVersion"></a>
+##### `insightsVersion`<sup>Optional</sup> <a name="insightsVersion" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.insightsVersion"></a>
 
 ```typescript
 public readonly insightsVersion: LambdaInsightsVersion;
@@ -1529,7 +1529,7 @@ Specify the version of CloudWatch Lambda insights to use for monitoring.
 
 ---
 
-##### `layers`<sup>Optional</sup> <a name="layers" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.layers"></a>
+##### `layers`<sup>Optional</sup> <a name="layers" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.layers"></a>
 
 ```typescript
 public readonly layers: ILayerVersion[];
@@ -1546,7 +1546,7 @@ that can be used by multiple functions.
 
 ---
 
-##### `logRetention`<sup>Optional</sup> <a name="logRetention" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.logRetention"></a>
+##### `logRetention`<sup>Optional</sup> <a name="logRetention" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.logRetention"></a>
 
 ```typescript
 public readonly logRetention: RetentionDays;
@@ -1563,7 +1563,7 @@ remove the retention policy, set the value to `INFINITE`.
 
 ---
 
-##### `logRetentionRetryOptions`<sup>Optional</sup> <a name="logRetentionRetryOptions" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.logRetentionRetryOptions"></a>
+##### `logRetentionRetryOptions`<sup>Optional</sup> <a name="logRetentionRetryOptions" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.logRetentionRetryOptions"></a>
 
 ```typescript
 public readonly logRetentionRetryOptions: LogRetentionRetryOptions;
@@ -1578,7 +1578,7 @@ These options control the retry policy when interacting with CloudWatch APIs.
 
 ---
 
-##### `logRetentionRole`<sup>Optional</sup> <a name="logRetentionRole" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.logRetentionRole"></a>
+##### `logRetentionRole`<sup>Optional</sup> <a name="logRetentionRole" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.logRetentionRole"></a>
 
 ```typescript
 public readonly logRetentionRole: IRole;
@@ -1591,7 +1591,7 @@ The IAM role for the Lambda function associated with the custom resource that se
 
 ---
 
-##### `memorySize`<sup>Optional</sup> <a name="memorySize" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.memorySize"></a>
+##### `memorySize`<sup>Optional</sup> <a name="memorySize" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.memorySize"></a>
 
 ```typescript
 public readonly memorySize: number;
@@ -1608,7 +1608,7 @@ Developer Guide.
 
 ---
 
-##### `profiling`<sup>Optional</sup> <a name="profiling" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.profiling"></a>
+##### `profiling`<sup>Optional</sup> <a name="profiling" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.profiling"></a>
 
 ```typescript
 public readonly profiling: boolean;
@@ -1623,7 +1623,7 @@ Enable profiling.
 
 ---
 
-##### `profilingGroup`<sup>Optional</sup> <a name="profilingGroup" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.profilingGroup"></a>
+##### `profilingGroup`<sup>Optional</sup> <a name="profilingGroup" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.profilingGroup"></a>
 
 ```typescript
 public readonly profilingGroup: IProfilingGroup;
@@ -1638,7 +1638,7 @@ Profiling Group.
 
 ---
 
-##### `reservedConcurrentExecutions`<sup>Optional</sup> <a name="reservedConcurrentExecutions" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.reservedConcurrentExecutions"></a>
+##### `reservedConcurrentExecutions`<sup>Optional</sup> <a name="reservedConcurrentExecutions" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.reservedConcurrentExecutions"></a>
 
 ```typescript
 public readonly reservedConcurrentExecutions: number;
@@ -1653,7 +1653,7 @@ The maximum of concurrent executions you want to reserve for the function.
 
 ---
 
-##### `role`<sup>Optional</sup> <a name="role" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.role"></a>
+##### `role`<sup>Optional</sup> <a name="role" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.role"></a>
 
 ```typescript
 public readonly role: IRole;
@@ -1676,7 +1676,7 @@ The relevant managed policies are "service-role/AWSLambdaBasicExecutionRole" and
 
 ---
 
-##### `securityGroups`<sup>Optional</sup> <a name="securityGroups" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.securityGroups"></a>
+##### `securityGroups`<sup>Optional</sup> <a name="securityGroups" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.securityGroups"></a>
 
 ```typescript
 public readonly securityGroups: ISecurityGroup[];
@@ -1691,7 +1691,7 @@ Only used if 'vpc' is supplied.
 
 ---
 
-##### `timeout`<sup>Optional</sup> <a name="timeout" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.timeout"></a>
+##### `timeout`<sup>Optional</sup> <a name="timeout" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.timeout"></a>
 
 ```typescript
 public readonly timeout: Duration;
@@ -1707,7 +1707,7 @@ based on the function's expected execution time.
 
 ---
 
-##### `tracing`<sup>Optional</sup> <a name="tracing" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.tracing"></a>
+##### `tracing`<sup>Optional</sup> <a name="tracing" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.tracing"></a>
 
 ```typescript
 public readonly tracing: Tracing;
@@ -1720,7 +1720,7 @@ Enable AWS X-Ray Tracing for Lambda Function.
 
 ---
 
-##### `vpc`<sup>Optional</sup> <a name="vpc" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.vpc"></a>
+##### `vpc`<sup>Optional</sup> <a name="vpc" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.vpc"></a>
 
 ```typescript
 public readonly vpc: IVpc;
@@ -1736,7 +1736,7 @@ This is required when `vpcSubnets` is specified.
 
 ---
 
-##### `vpcSubnets`<sup>Optional</sup> <a name="vpcSubnets" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.vpcSubnets"></a>
+##### `vpcSubnets`<sup>Optional</sup> <a name="vpcSubnets" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.vpcSubnets"></a>
 
 ```typescript
 public readonly vpcSubnets: SubnetSelection;
@@ -1755,7 +1755,7 @@ public subnets is not allowed (unless `allowPublicSubnet` is set to `true`).
 
 ---
 
-##### `projectDir`<sup>Required</sup> <a name="projectDir" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.projectDir"></a>
+##### `projectDir`<sup>Required</sup> <a name="projectDir" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.projectDir"></a>
 
 ```typescript
 public readonly projectDir: string;
@@ -1767,20 +1767,20 @@ Directory containing your .csproj file.
 
 ---
 
-##### `bundling`<sup>Optional</sup> <a name="bundling" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.bundling"></a>
+##### `bundling`<sup>Optional</sup> <a name="bundling" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.bundling"></a>
 
 ```typescript
 public readonly bundling: BundlingOptions;
 ```
 
-- *Type:* <a href="#cdk-aws-lambda-dotnet.BundlingOptions">BundlingOptions</a>
+- *Type:* <a href="#@xaaskit-cdk/aws-lambda-dotnet.BundlingOptions">BundlingOptions</a>
 - *Default:* use default bundling options
 
 Bundling options.
 
 ---
 
-##### `handler`<sup>Optional</sup> <a name="handler" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.handler"></a>
+##### `handler`<sup>Optional</sup> <a name="handler" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.handler"></a>
 
 ```typescript
 public readonly handler: string;
@@ -1797,7 +1797,7 @@ see https://docs.aws.amazon.com/lambda/latest/dg/foundation-progmodel.html.
 
 ---
 
-##### `runtime`<sup>Optional</sup> <a name="runtime" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.runtime"></a>
+##### `runtime`<sup>Optional</sup> <a name="runtime" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.runtime"></a>
 
 ```typescript
 public readonly runtime: Runtime;
@@ -1812,7 +1812,7 @@ Only runtimes of the .NET family and provided family are supported.
 
 ---
 
-##### `solutionDir`<sup>Optional</sup> <a name="solutionDir" id="cdk-aws-lambda-dotnet.DotNetFunctionProps.property.solutionDir"></a>
+##### `solutionDir`<sup>Optional</sup> <a name="solutionDir" id="@xaaskit-cdk/aws-lambda-dotnet.DotNetFunctionProps.property.solutionDir"></a>
 
 ```typescript
 public readonly solutionDir: string;
@@ -1831,9 +1831,9 @@ container and will be the directory where it will run `dotnet build` from.
 
 ## Protocols <a name="Protocols" id="Protocols"></a>
 
-### ICommandHooks <a name="ICommandHooks" id="cdk-aws-lambda-dotnet.ICommandHooks"></a>
+### ICommandHooks <a name="ICommandHooks" id="@xaaskit-cdk/aws-lambda-dotnet.ICommandHooks"></a>
 
-- *Implemented By:* <a href="#cdk-aws-lambda-dotnet.ICommandHooks">ICommandHooks</a>
+- *Implemented By:* <a href="#@xaaskit-cdk/aws-lambda-dotnet.ICommandHooks">ICommandHooks</a>
 
 Command hooks.
 
@@ -1856,12 +1856,12 @@ Commands are chained with `&&`.
 
 | **Name** | **Description** |
 | --- | --- |
-| <code><a href="#cdk-aws-lambda-dotnet.ICommandHooks.afterBundling">afterBundling</a></code> | Returns commands to run after bundling. |
-| <code><a href="#cdk-aws-lambda-dotnet.ICommandHooks.beforeBundling">beforeBundling</a></code> | Returns commands to run before bundling. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.ICommandHooks.afterBundling">afterBundling</a></code> | Returns commands to run after bundling. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.ICommandHooks.beforeBundling">beforeBundling</a></code> | Returns commands to run before bundling. |
 
 ---
 
-##### `afterBundling` <a name="afterBundling" id="cdk-aws-lambda-dotnet.ICommandHooks.afterBundling"></a>
+##### `afterBundling` <a name="afterBundling" id="@xaaskit-cdk/aws-lambda-dotnet.ICommandHooks.afterBundling"></a>
 
 ```typescript
 public afterBundling(inputDir: string, outputDir: string): string[]
@@ -1871,19 +1871,19 @@ Returns commands to run after bundling.
 
 Commands are chained with `&&`.
 
-###### `inputDir`<sup>Required</sup> <a name="inputDir" id="cdk-aws-lambda-dotnet.ICommandHooks.afterBundling.parameter.inputDir"></a>
+###### `inputDir`<sup>Required</sup> <a name="inputDir" id="@xaaskit-cdk/aws-lambda-dotnet.ICommandHooks.afterBundling.parameter.inputDir"></a>
 
 - *Type:* string
 
 ---
 
-###### `outputDir`<sup>Required</sup> <a name="outputDir" id="cdk-aws-lambda-dotnet.ICommandHooks.afterBundling.parameter.outputDir"></a>
+###### `outputDir`<sup>Required</sup> <a name="outputDir" id="@xaaskit-cdk/aws-lambda-dotnet.ICommandHooks.afterBundling.parameter.outputDir"></a>
 
 - *Type:* string
 
 ---
 
-##### `beforeBundling` <a name="beforeBundling" id="cdk-aws-lambda-dotnet.ICommandHooks.beforeBundling"></a>
+##### `beforeBundling` <a name="beforeBundling" id="@xaaskit-cdk/aws-lambda-dotnet.ICommandHooks.beforeBundling"></a>
 
 ```typescript
 public beforeBundling(inputDir: string, outputDir: string): string[]
@@ -1893,13 +1893,13 @@ Returns commands to run before bundling.
 
 Commands are chained with `&&`.
 
-###### `inputDir`<sup>Required</sup> <a name="inputDir" id="cdk-aws-lambda-dotnet.ICommandHooks.beforeBundling.parameter.inputDir"></a>
+###### `inputDir`<sup>Required</sup> <a name="inputDir" id="@xaaskit-cdk/aws-lambda-dotnet.ICommandHooks.beforeBundling.parameter.inputDir"></a>
 
 - *Type:* string
 
 ---
 
-###### `outputDir`<sup>Required</sup> <a name="outputDir" id="cdk-aws-lambda-dotnet.ICommandHooks.beforeBundling.parameter.outputDir"></a>
+###### `outputDir`<sup>Required</sup> <a name="outputDir" id="@xaaskit-cdk/aws-lambda-dotnet.ICommandHooks.beforeBundling.parameter.outputDir"></a>
 
 - *Type:* string
 

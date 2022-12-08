@@ -1,4 +1,4 @@
-import { awscdk } from 'projen';
+import { awscdk, JsonPatch } from 'projen';
 
 const project = new awscdk.AwsCdkConstructLibrary({
   projenrcTs: true,
@@ -14,5 +14,10 @@ const project = new awscdk.AwsCdkConstructLibrary({
   // packageName: undefined,  /* The "name" in package.json. */
 });
 project.gitignore.addPatterns('/test/fixtures/**/bin', '/test/fixtures/**/obj');
+//project.preCompileTask?.exec('if ! command -v <the_command> &> /dev/null; then dotnet tool install -g Amazon.Lambda.Tools; fi;');
+// Add setup-dotnet action to build workflow
+const buildWorkflow = project.tryFindObjectFile('.github/workflows/build.yml');
+buildWorkflow?.patch(JsonPatch.add('/jobs/build/steps/2', { 'uses': 'actions/setup-dotnet@v3', 'with': { 'dotnet-version': '6.0.x' } }));
+buildWorkflow?.patch(JsonPatch.add('/jobs/build/steps/3', { 'run': 'dotnet tool install -g Amazon.Lambda.Tools' }));
 
 project.synth();
