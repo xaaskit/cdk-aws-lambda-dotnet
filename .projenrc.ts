@@ -3,7 +3,7 @@ import { NpmAccess } from 'projen/lib/javascript';
 
 const project = new awscdk.AwsCdkConstructLibrary({
   projenrcTs: true,
-  name: '@xaaskit-cdk/aws-lambda-dotnet',  
+  name: '@xaaskit-cdk/aws-lambda-dotnet',
   description: 'AWS CDK construct library for .NET Lambda functions.',
   majorVersion: 0,
   author: 'XaasKit',
