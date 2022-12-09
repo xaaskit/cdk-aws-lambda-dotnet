@@ -17,7 +17,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   npmAccess: NpmAccess.PUBLIC,
   publishToNuget: {
     packageId: 'XaasKit.CDK.AWS.Lambda.DotNet',
-    dotNetNamespace: 'XaasKit.CDK',
+    dotNetNamespace: 'XaasKit.CDK.AWS.Lambda.DotNet',
   },
   artifactsDirectory: 'dist',
 });

@@ -119,7 +119,7 @@
     "outdir": "dist",
     "targets": {
       "dotnet": {
-        "namespace": "XaasKit.CDK",
+        "namespace": "XaasKit.CDK.AWS.Lambda.DotNet",
         "packageId": "XaasKit.CDK.AWS.Lambda.DotNet"
       }
     },

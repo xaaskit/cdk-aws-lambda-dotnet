@@ -118,10 +118,10 @@ export class Bundling implements cdk.BundlingOptions {
     const pathJoin = osPathJoin(osPlatform);
 
     const projectLocation = this.relativeProjectPath.replace(/\\/g, '/');
-    const packageFile = pathJoin(projectLocation, 'package.zip');
+    const packageFile = pathJoin(outputDir, 'package.zip');
     const dotnetPackageCommand: string = ['dotnet', 'lambda', 'package', '--project-location', projectLocation, '--output-package', packageFile].filter(c => !!c).join(' ');
-    const unzipCommand: string = ['unzip', '-od', outputDir, packageFile].filter(c => !!c).join(' ');
-    const deleteCommand: string = ['rm', packageFile].filter(c => !!c).join(' ');
+    const unzipCommand: string = osPlatform === 'win32' ? ['powershell', '-command', 'Expand-Archive', packageFile, outputDir].join(' ') : ['unzip', '-od', outputDir, packageFile].filter(c => !!c).join(' ');
+    const deleteCommand: string = osPlatform === 'win32' ? ['powershell', '-command', 'Remove-Item', packageFile].filter(c => !!c).join(' ') : ['rm', packageFile].filter(c => !!c).join(' ');
 
     return chain([
       ...this.props.commandHooks?.beforeBundling(inputDir, outputDir) ?? [],
