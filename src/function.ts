@@ -90,7 +90,7 @@ export class DotNetFunction extends lambda.Function {
     let handler: string;
     if (props.handler) {
       handler = props.handler;
-    } if (lambdaToolsDefaults && lambdaToolsDefaults['function-handler']) {
+    } else if (lambdaToolsDefaults && lambdaToolsDefaults['function-handler']) {
       handler = lambdaToolsDefaults['function-handler'];
     } else {
       const projectFile = fs.readdirSync(projectDir).find((file) => file.endsWith('.csproj'));
