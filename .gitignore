@@ -51,5 +51,6 @@ junit.xml
 .jsii
 tsconfig.json
 !/API.md
+/.yarn
 /test/fixtures/**/bin
 /test/fixtures/**/obj

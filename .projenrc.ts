@@ -21,6 +21,8 @@ const project = new awscdk.AwsCdkConstructLibrary({
   },
   artifactsDirectory: 'dist',
 });
+project.gitignore.exclude('/.yarn');
 project.gitignore.addPatterns('/test/fixtures/**/bin', '/test/fixtures/**/obj');
+project.npmignore?.include('src/**/Dockerfile');
 
 project.synth();
