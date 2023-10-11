@@ -2,8 +2,8 @@
 import { Template } from 'aws-cdk-lib/assertions';
 import { DotNetFunction } from '../src';*/
 
-describe('DotNetFunction', () => {
-  it('Should match snapshots', () => {
+describe("DotNetFunction", () => {
+  it("Should match snapshots", () => {
     /*// Given
     const stack = new Stack();
     new DotNetFunction(stack, 'Function', { projectDir: 'test/fixtures/EmptyFunction' });
