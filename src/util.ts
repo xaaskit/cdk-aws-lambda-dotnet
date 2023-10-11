@@ -1,10 +1,10 @@
-import { spawnSync, SpawnSyncOptions } from 'child_process';
-import * as fs from 'fs';
-import * as path from 'path';
+import { spawnSync, SpawnSyncOptions } from "child_process";
+import * as fs from "fs";
+import * as path from "path";
 
 export function getDotNetLambdaTools(): boolean | undefined {
   try {
-    const dotnet = spawnSync('dotnet', ['lambda', '--help']);
+    const dotnet = spawnSync("dotnet", ["lambda", "--help"]);
     if (dotnet.status !== 0 || dotnet.error) {
       return undefined;
     }
@@ -48,9 +48,9 @@ export function findUp(ext: string, directory: string = process.cwd()): string |
 }
 
 export function getLambdaToolsDefaults(projectDir: string): any {
-  const lambdaToolsDefaultsFile = path.join(projectDir, 'aws-lambda-tools-defaults.json');
+  const lambdaToolsDefaultsFile = path.join(projectDir, "aws-lambda-tools-defaults.json");
   if (fs.existsSync(lambdaToolsDefaultsFile)) {
-    return JSON.parse(fs.readFileSync(lambdaToolsDefaultsFile, 'utf8'));
+    return JSON.parse(fs.readFileSync(lambdaToolsDefaultsFile, "utf8"));
   }
   return undefined;
 }
