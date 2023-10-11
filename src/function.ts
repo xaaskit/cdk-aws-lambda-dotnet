@@ -58,15 +58,27 @@ export interface DotNetFunctionProps extends lambda.FunctionOptions {
  */
 export class DotNetFunction extends lambda.Function {
   constructor(scope: Construct, id: string, props: DotNetFunctionProps) {
-    if (props.runtime && (props.runtime.family !== lambda.RuntimeFamily.DOTNET_CORE && props.runtime.family != lambda.RuntimeFamily.OTHER)) {
+    if (
+      props.runtime &&
+      props.runtime.family !== lambda.RuntimeFamily.DOTNET_CORE &&
+      props.runtime.family != lambda.RuntimeFamily.OTHER
+    ) {
       throw new Error('Only `.NET` and `provided` runtimes are supported.');
     }
     const { projectDir } = props;
 
     const lambdaToolsDefaults = getLambdaToolsDefaults(projectDir);
 
-    const runtime = props.runtime ?? (lambdaToolsDefaults && lambdaToolsDefaults['function-runtime'] ? new lambda.Runtime(lambdaToolsDefaults['function-runtime']) : lambda.Runtime.DOTNET_6);
-    const architecture = props.architecture ?? (lambdaToolsDefaults ? lambdaToolsDefaults['function-architecture'] : lambda.Architecture.X86_64);
+    const runtime =
+      props.runtime ??
+      (lambdaToolsDefaults && lambdaToolsDefaults['function-runtime']
+        ? new lambda.Runtime(lambdaToolsDefaults['function-runtime'])
+        : lambda.Runtime.DOTNET_6);
+    const architecture =
+      props.architecture ??
+      (lambdaToolsDefaults && lambdaToolsDefaults['function-architecture']
+        ? lambdaToolsDefaults['function-architecture']
+        : lambda.Architecture.X86_64);
 
     let solutionDir: string;
     if (props.solutionDir) {
@@ -105,7 +117,7 @@ export class DotNetFunction extends lambda.Function {
       ...props,
       runtime,
       code: Bundling.bundle({
-        ...props.bundling ?? {},
+        ...(props.bundling ?? {}),
         runtime,
         architecture,
         projectDir,

@@ -1,7 +1,7 @@
 [![GitHub](https://img.shields.io/github/license/xaaskit/cdk-aws-lambda-dotnet?style=flat-square)](https://github.com/xaaskit/cdk-aws-lambda-dotnet/blob/main/LICENSE)
 [![npm (scoped)](https://img.shields.io/npm/v/@xaaskit-cdk/aws-lambda-dotnet?style=flat-square)](https://www.npmjs.com/package/@xaaskit-cdk/aws-lambda-dotnet)
 [![Nuget](https://img.shields.io/nuget/v/XaasKit.CDK.AWS.Lambda.DotNet?style=flat-square)](https://www.nuget.org/packages/XaasKit.CDK.AWS.Lambda.DotNet/)
-[![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/xaaskit/cdk-aws-lambda-dotnet/release/main?label=release&style=flat-square)](https://github.com/xaaskit/cdk-aws-lambda-dotnet/actions/workflows/release.yml)
+[![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/xaaskit/cdk-aws-lambda-dotnet/release.yml?branch=main&label=release&style=flat-square)](https://github.com/xaaskit/cdk-aws-lambda-dotnet/actions/workflows/release.yml)
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/xaaskit/cdk-aws-lambda-dotnet?sort=semver&style=flat-square)](https://github.com/xaaskit/cdk-aws-lambda-dotnet/releases)
 
 # CDK AWS Lambda for .NET
