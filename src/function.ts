@@ -1,10 +1,10 @@
-import * as fs from 'fs';
-import * as path from 'path';
-import * as lambda from 'aws-cdk-lib/aws-lambda';
-import { Construct } from 'constructs';
-import { Bundling } from './bundling';
-import { BundlingOptions } from './types';
-import { findUp, getLambdaToolsDefaults } from './util';
+import * as fs from "fs";
+import * as path from "path";
+import * as lambda from "aws-cdk-lib/aws-lambda";
+import { Construct } from "constructs";
+import { Bundling } from "./bundling";
+import { BundlingOptions } from "./types";
+import { findUp, getLambdaToolsDefaults } from "./util";
 
 /**
  * Properties for a .NET Function
@@ -63,7 +63,7 @@ export class DotNetFunction extends lambda.Function {
       props.runtime.family !== lambda.RuntimeFamily.DOTNET_CORE &&
       props.runtime.family != lambda.RuntimeFamily.OTHER
     ) {
-      throw new Error('Only `.NET` and `provided` runtimes are supported.');
+      throw new Error("Only `.NET` and `provided` runtimes are supported.");
     }
     const { projectDir } = props;
 
@@ -71,30 +71,30 @@ export class DotNetFunction extends lambda.Function {
 
     const runtime =
       props.runtime ??
-      (lambdaToolsDefaults && lambdaToolsDefaults['function-runtime']
-        ? new lambda.Runtime(lambdaToolsDefaults['function-runtime'])
+      (lambdaToolsDefaults && lambdaToolsDefaults["function-runtime"]
+        ? new lambda.Runtime(lambdaToolsDefaults["function-runtime"])
         : lambda.Runtime.DOTNET_6);
     const architecture =
       props.architecture ??
-      (lambdaToolsDefaults && lambdaToolsDefaults['function-architecture']
-        ? lambdaToolsDefaults['function-architecture']
+      (lambdaToolsDefaults && lambdaToolsDefaults["function-architecture"]
+        ? lambdaToolsDefaults["function-architecture"]
         : lambda.Architecture.X86_64);
 
     let solutionDir: string;
     if (props.solutionDir) {
       solutionDir = props.solutionDir;
       const parsedSolutionDir = path.parse(props.solutionDir);
-      if (parsedSolutionDir.ext && parsedSolutionDir.ext === '.sln') {
+      if (parsedSolutionDir.ext && parsedSolutionDir.ext === ".sln") {
         if (!fs.existsSync(props.solutionDir)) {
           throw new Error(`Solutions file at ${props.solutionDir} doesn't exist`);
         }
-      } else if (parsedSolutionDir.ext && parsedSolutionDir.ext === '.sln') {
-        throw new Error('solutionDir is specifying a file that is a solutions file (.sln)');
-      } else if (!fs.readdirSync(solutionDir).find((file) => file.endsWith('.sln'))) {
+      } else if (parsedSolutionDir.ext && parsedSolutionDir.ext === ".sln") {
+        throw new Error("solutionDir is specifying a file that is a solutions file (.sln)");
+      } else if (!fs.readdirSync(solutionDir).find((file) => file.endsWith(".sln"))) {
         throw new Error(`Solution file (.sln) at ${props.solutionDir} doesn't exist`);
       }
     } else {
-      const solutionFile = findUp('.sln', projectDir);
+      const solutionFile = findUp(".sln", projectDir);
       solutionDir = path.resolve(solutionFile ? path.dirname(solutionFile) : projectDir);
     }
 
@@ -102,14 +102,14 @@ export class DotNetFunction extends lambda.Function {
     let handler: string;
     if (props.handler) {
       handler = props.handler;
-    } else if (lambdaToolsDefaults && lambdaToolsDefaults['function-handler']) {
-      handler = lambdaToolsDefaults['function-handler'];
+    } else if (lambdaToolsDefaults && lambdaToolsDefaults["function-handler"]) {
+      handler = lambdaToolsDefaults["function-handler"];
     } else {
-      const projectFile = fs.readdirSync(projectDir).find((file) => file.endsWith('.csproj'));
+      const projectFile = fs.readdirSync(projectDir).find((file) => file.endsWith(".csproj"));
       if (!projectFile) {
         throw new Error(`.csproj file at ${props.projectDir} doesn't exist`);
       }
-      const projectName = projectFile.replace('.csproj', '');
+      const projectName = projectFile.replace(".csproj", "");
       handler = projectName;
     }
 
