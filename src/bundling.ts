@@ -76,14 +76,14 @@ export class Bundling implements cdk.BundlingOptions {
         })
       : cdk.DockerImage.fromRegistry('dummy'); // Do not build if we don't need to
 
-    const bundlingCommand = this.createBundlingCommand(cdk.AssetStaging.BUNDLING_INPUT_DIR, cdk.AssetStaging.BUNDLING_OUTPUT_DIR);
+    const bundlingCommand = this.createBundlingCommand(cdk.AssetStaging.BUNDLING_INPUT_DIR, cdk.AssetStaging.BUNDLING_OUTPUT_DIR, props.architecture);
     this.command = ['bash', '-c', bundlingCommand];
     this.environment = environment;
 
     // Local bundling
     if (!props.forcedDockerBundling) { // only if Docker is not forced
       const osPlatform = os.platform();
-      const createLocalCommand = (outputDir: string) => this.createBundlingCommand(solutionDir, outputDir, osPlatform);
+      const createLocalCommand = (outputDir: string) => this.createBundlingCommand(solutionDir, outputDir, props.architecture, osPlatform);
       this.local = {
         tryBundle(outputDir: string) {
           if (Bundling.runsLocally == false) {
@@ -114,12 +114,13 @@ export class Bundling implements cdk.BundlingOptions {
     }
   }
 
-  public createBundlingCommand(inputDir: string, outputDir: string, osPlatform: NodeJS.Platform = 'linux'): string {
+  public createBundlingCommand(inputDir: string, outputDir: string, architecture: Architecture, osPlatform: NodeJS.Platform = 'linux'): string {
     const pathJoin = osPathJoin(osPlatform);
 
     const projectLocation = this.relativeProjectPath.replace(/\\/g, '/');
     const packageFile = pathJoin(outputDir, 'package.zip');
-    const dotnetPackageCommand: string = ['dotnet', 'lambda', 'package', '--project-location', projectLocation, '--output-package', packageFile].filter(c => !!c).join(' ');
+    const arch = architecture == Architecture.ARM_64 ? 'arm64' : 'x86_64';
+    const dotnetPackageCommand: string = ['dotnet', 'lambda', 'package', '--project-location', projectLocation, '-farch', arch, '--output-package', packageFile].filter(c => !!c).join(' ');
     const unzipCommand: string = osPlatform === 'win32' ? ['powershell', '-command', 'Expand-Archive', packageFile, outputDir].join(' ') : ['unzip', '-od', outputDir, packageFile].filter(c => !!c).join(' ');
     const deleteCommand: string = osPlatform === 'win32' ? ['powershell', '-command', 'Remove-Item', packageFile].filter(c => !!c).join(' ') : ['rm', packageFile].filter(c => !!c).join(' ');
 
