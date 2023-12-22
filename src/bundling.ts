@@ -1,7 +1,7 @@
 import * as os from "os";
 import * as path from "path";
 import * as cdk from "aws-cdk-lib";
-import { Architecture, AssetCode, Code, Runtime } from "aws-cdk-lib/aws-lambda";
+import { Architecture, AssetCode, Code, Runtime, RuntimeFamily } from "aws-cdk-lib/aws-lambda";
 import { BundlingOptions } from "./types";
 import { exec, getDotNetLambdaTools } from "./util";
 
@@ -29,10 +29,10 @@ export interface BundlingProps extends BundlingOptions {
 export class Bundling implements cdk.BundlingOptions {
   public static bundle(options: BundlingProps): AssetCode {
     const bundling = new Bundling(options);
-
     return Code.fromAsset(options.solutionDir, {
-      assetHashType: options.assetHashType ?? cdk.AssetHashType.SOURCE,
       assetHash: options.assetHash,
+      assetHashType: options.assetHash ? cdk.AssetHashType.CUSTOM : cdk.AssetHashType.SOURCE,
+      exclude: ["**/bin/", "**/obj/"],
       bundling: {
         image: bundling.image,
         command: bundling.command,
@@ -43,19 +43,27 @@ export class Bundling implements cdk.BundlingOptions {
   }
 
   private static runsLocally?: boolean;
+  private static defaultBuildImage = "public.ecr.aws/sam/build-dotnet7";
 
   public readonly image: cdk.DockerImage;
   public readonly command: string[];
   public readonly environment?: { [key: string]: string };
   public readonly local?: cdk.ILocalBundling;
 
+  private readonly msbuildParameters: string[];
   private readonly relativeProjectPath: string;
 
   constructor(private readonly props: BundlingProps) {
-    Bundling.runsLocally = Bundling.runsLocally ?? getDotNetLambdaTools() ?? false;
+    Bundling.runsLocally = Bundling.runsLocally ?? getDotNetLambdaTools();
 
-    const { solutionDir } = props;
-    this.relativeProjectPath = `./${path.relative(solutionDir, path.resolve(props.projectDir))}`;
+    const { solutionDir, projectDir } = props;
+    this.relativeProjectPath = path.relative(path.resolve(solutionDir), path.resolve(projectDir));
+    this.relativeProjectPath = this.relativeProjectPath === "" ? "." : this.relativeProjectPath;
+
+    this.msbuildParameters = props.msbuildParameters ?? [];
+    if (props.runtime.family === RuntimeFamily.OTHER) {
+      this.msbuildParameters.push("--self-contained", "/p:AssemblyName=bootstrap");
+    }
 
     const environment = {
       ...props.environment,
@@ -64,7 +72,7 @@ export class Bundling implements cdk.BundlingOptions {
     // Docker Bundling
     const shouldBuildImage = props.forcedDockerBundling || !Bundling.runsLocally;
     this.image = shouldBuildImage
-      ? props.dockerImage ?? cdk.DockerImage.fromRegistry(Runtime.DOTNET_6.bundlingImage.image)
+      ? props.dockerImage ?? cdk.DockerImage.fromRegistry(Bundling.defaultBuildImage)
       : cdk.DockerImage.fromRegistry("dummy"); // Do not build if we don't need to
 
     const bundlingCommand = this.createBundlingCommand(
@@ -84,7 +92,7 @@ export class Bundling implements cdk.BundlingOptions {
       this.local = {
         tryBundle(outputDir: string) {
           if (Bundling.runsLocally == false) {
-            process.stderr.write("go build cannot run locally. Switching to Docker bundling.\n");
+            process.stderr.write("dotnet build cannot run locally. Switching to Docker bundling.\n");
             return false;
           }
           const localCommand = createLocalCommand(outputDir);
@@ -115,7 +123,6 @@ export class Bundling implements cdk.BundlingOptions {
 
     const projectLocation = this.relativeProjectPath.replace(/\\/g, "/");
     const packageFile = pathJoin(outputDir, "package.zip");
-    const arch = architecture == Architecture.ARM_64 ? "arm64" : "x86_64";
     const dotnetPackageCommand: string = [
       "dotnet",
       "lambda",
@@ -123,9 +130,10 @@ export class Bundling implements cdk.BundlingOptions {
       "--project-location",
       projectLocation,
       "-farch",
-      arch,
+      architecture.name,
       "--output-package",
       packageFile,
+      this.msbuildParameters.length > 0 ? `--msbuild-parameters "${this.msbuildParameters.join(" ")}"` : "",
     ]
       .filter((c) => !!c)
       .join(" ");

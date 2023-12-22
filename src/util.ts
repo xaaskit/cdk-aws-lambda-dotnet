@@ -2,15 +2,15 @@ import { spawnSync, SpawnSyncOptions } from "child_process";
 import * as fs from "fs";
 import * as path from "path";
 
-export function getDotNetLambdaTools(): boolean | undefined {
+export function getDotNetLambdaTools(): boolean {
   try {
     const dotnet = spawnSync("dotnet", ["lambda", "--help"]);
     if (dotnet.status !== 0 || dotnet.error) {
-      return undefined;
+      return false;
     }
     return true;
   } catch (err) {
-    return undefined;
+    return false;
   }
 }
 

@@ -1105,11 +1105,11 @@ const bundlingOptions: BundlingOptions = { ... }
 | --- | --- | --- |
 | <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.BundlingOptions.property.assetHash">assetHash</a></code> | <code>string</code> | Specify a custom hash for this asset. |
 | <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.BundlingOptions.property.assetHashType">assetHashType</a></code> | <code>aws-cdk-lib.AssetHashType</code> | Determines how the asset hash is calculated. Assets will get rebuilt and uploaded only if their hash has changed. |
-| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.BundlingOptions.property.buildArgs">buildArgs</a></code> | <code>{[ key: string ]: string}</code> | Build arguments to pass when building the bundling image. |
 | <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.BundlingOptions.property.commandHooks">commandHooks</a></code> | <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.ICommandHooks">ICommandHooks</a></code> | Command hooks. |
 | <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.BundlingOptions.property.dockerImage">dockerImage</a></code> | <code>aws-cdk-lib.DockerImage</code> | A custom bundling Docker image. |
 | <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.BundlingOptions.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | Environment variables defined when go runs. |
 | <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.BundlingOptions.property.forcedDockerBundling">forcedDockerBundling</a></code> | <code>boolean</code> | Force bundling in a Docker container even if local bundling is possible. |
+| <code><a href="#@xaaskit-cdk/aws-lambda-dotnet.BundlingOptions.property.msbuildParameters">msbuildParameters</a></code> | <code>string[]</code> | Arguments passed to the `dotnet publish` command. |
 
 ---
 
@@ -1163,19 +1163,6 @@ all the functions to be rebuilt and uploaded.
 
 ---
 
-##### `buildArgs`<sup>Optional</sup> <a name="buildArgs" id="@xaaskit-cdk/aws-lambda-dotnet.BundlingOptions.property.buildArgs"></a>
-
-```typescript
-public readonly buildArgs: {[ key: string ]: string};
-```
-
-- *Type:* {[ key: string ]: string}
-- *Default:* no build arguments are passed
-
-Build arguments to pass when building the bundling image.
-
----
-
 ##### `commandHooks`<sup>Optional</sup> <a name="commandHooks" id="@xaaskit-cdk/aws-lambda-dotnet.BundlingOptions.property.commandHooks"></a>
 
 ```typescript
@@ -1225,6 +1212,18 @@ public readonly forcedDockerBundling: boolean;
 - *Default:* false
 
 Force bundling in a Docker container even if local bundling is possible.
+
+---
+
+##### `msbuildParameters`<sup>Optional</sup> <a name="msbuildParameters" id="@xaaskit-cdk/aws-lambda-dotnet.BundlingOptions.property.msbuildParameters"></a>
+
+```typescript
+public readonly msbuildParameters: string[];
+```
+
+- *Type:* string[]
+
+Arguments passed to the `dotnet publish` command.
 
 ---
 
@@ -1866,7 +1865,7 @@ public readonly runtime: Runtime;
 ```
 
 - *Type:* aws-cdk-lib.aws_lambda.Runtime
-- *Default:* lambda.Runtime.DOTNET_6
+- *Default:* lambda.Runtime.PROVIDED_AL2
 
 The runtime environment.
 
