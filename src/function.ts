@@ -13,7 +13,7 @@ export interface DotNetFunctionProps extends lambda.FunctionOptions {
   /**
    * The runtime environment. Only runtimes of the .NET family and provided family are supported.
    *
-   * @default lambda.Runtime.DOTNET_6
+   * @default lambda.Runtime.PROVIDED_AL2
    */
   readonly runtime?: lambda.Runtime;
 
@@ -58,28 +58,51 @@ export interface DotNetFunctionProps extends lambda.FunctionOptions {
  */
 export class DotNetFunction extends lambda.Function {
   constructor(scope: Construct, id: string, props: DotNetFunctionProps) {
-    if (
-      props.runtime &&
-      props.runtime.family !== lambda.RuntimeFamily.DOTNET_CORE &&
-      props.runtime.family != lambda.RuntimeFamily.OTHER
-    ) {
-      throw new Error("Only `.NET` and `provided` runtimes are supported.");
-    }
     const { projectDir } = props;
 
+    // Find aws-lambda-tools-defaults.json in project directory
     const lambdaToolsDefaults = getLambdaToolsDefaults(projectDir);
 
-    const runtime =
-      props.runtime ??
-      (lambdaToolsDefaults && lambdaToolsDefaults["function-runtime"]
-        ? new lambda.Runtime(lambdaToolsDefaults["function-runtime"])
-        : lambda.Runtime.DOTNET_6);
-    const architecture =
-      props.architecture ??
-      (lambdaToolsDefaults && lambdaToolsDefaults["function-architecture"]
-        ? lambdaToolsDefaults["function-architecture"]
-        : lambda.Architecture.X86_64);
+    // Resolve Lambda runtime from properties, aws-lambda-tools-defaults.json or default to PROVIDED_AL2
 
+    let runtime = props.runtime;
+    if (!runtime) {
+      const toolsRuntime = lambdaToolsDefaults?.["function-runtime"] as string | undefined;
+      if (toolsRuntime && (toolsRuntime.startsWith("dotnet") || toolsRuntime.startsWith("provided"))) {
+        const family = toolsRuntime.startsWith("dotnet")
+          ? lambda.RuntimeFamily.DOTNET_CORE
+          : lambda.RuntimeFamily.OTHER;
+        runtime = new lambda.Runtime(toolsRuntime, family);
+      } else {
+        runtime = lambda.Runtime.DOTNET_6;
+      }
+    }
+    if (runtime.family !== lambda.RuntimeFamily.DOTNET_CORE && runtime.family !== lambda.RuntimeFamily.OTHER) {
+      throw new Error(`Unsupported runtime '${runtime.name}'. Only '.NET' and 'provided' runtimes are supported.`);
+    }
+
+    // Resolve architecture from properties, aws-lambda-tools-defaults.json, get current processor architect for provided runtimes
+    // or default to X86_64.
+    let architecture = props.architecture;
+    if (!architecture) {
+      const toolsArchitecture = lambdaToolsDefaults?.["function-architecture"] as string | undefined;
+      toolsArchitecture;
+      if (toolsArchitecture) {
+        architecture = lambdaArchitecture(toolsArchitecture);
+      } else if (runtime.family === lambda.RuntimeFamily.OTHER) {
+        architecture = lambdaArchitecture(process.arch);
+      } else {
+        architecture = lambda.Architecture.X86_64;
+      }
+    }
+    if (runtime.family === lambda.RuntimeFamily.OTHER && architecture?.name !== lambdaArchitecture(process.arch).name) {
+      throw new Error(
+        `Unsupported architecture '${runtime.name}'. Only '${process.arch}' architure is supported for provided runtimes.`,
+      );
+    }
+
+    // Resolve solution directory from property.
+    // If is file, than use the folder else find traverse parent folders of projectDir to find solution file.
     let solutionDir: string;
     if (props.solutionDir) {
       solutionDir = props.solutionDir;
@@ -88,8 +111,6 @@ export class DotNetFunction extends lambda.Function {
         if (!fs.existsSync(props.solutionDir)) {
           throw new Error(`Solutions file at ${props.solutionDir} doesn't exist`);
         }
-      } else if (parsedSolutionDir.ext && parsedSolutionDir.ext === ".sln") {
-        throw new Error("solutionDir is specifying a file that is a solutions file (.sln)");
       } else if (!fs.readdirSync(solutionDir).find((file) => file.endsWith(".sln"))) {
         throw new Error(`Solution file (.sln) at ${props.solutionDir} doesn't exist`);
       }
@@ -116,6 +137,7 @@ export class DotNetFunction extends lambda.Function {
     super(scope, id, {
       ...props,
       runtime,
+      architecture,
       code: Bundling.bundle({
         ...(props.bundling ?? {}),
         runtime,
@@ -126,4 +148,8 @@ export class DotNetFunction extends lambda.Function {
       handler,
     });
   }
+}
+
+function lambdaArchitecture(architecture: string): lambda.Architecture {
+  return architecture === "arm64" ? lambda.Architecture.ARM_64 : lambda.Architecture.X86_64;
 }
